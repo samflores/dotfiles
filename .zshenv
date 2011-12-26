@@ -3,6 +3,9 @@ export ARCHFLAGS='-arch x86_64'
 export LDFLAGS="$LDFLAGS /usr/local/Cellar/readline/6.2.2/lib"
 export CPPFLAGS="$CPPFLAGS /usr/local/Cellar/readline/6.2.2/include"
 
+# General
+export PROJECTS_HOME=/Code
+
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
