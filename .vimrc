@@ -107,6 +107,8 @@ map <leader>ga  :Gwrite<CR>
 map <leader>gco :Gread<CR>
 map <leader>gd  :Gdiff<CR>
 map <leader>gc  :Gcommit<CR>
+map <leader>gca :Gcommit --amend<CR>
+map <leader>gra :Git ra<CR>
 
 "" I ALWAYS type 'W' instead 'w'
 command! W :w
