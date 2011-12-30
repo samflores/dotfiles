@@ -41,6 +41,7 @@ set smartcase                   " ... unless we have a capital letter
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
 colorscheme solarized
+set t_Co=16
 
 "" Jump to the laskt known cursor position on openning
 autocmd BufReadPost *
