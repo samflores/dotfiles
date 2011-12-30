@@ -88,8 +88,10 @@ map <leader>fs :CommandTFlush<CR>\|:CommandT public/stylesheets<CR>
 map <leader>fS :CommandTFlush<CR>\|:CommandT app/assets/stylesheets<CR>
 map <leader>fJ :CommandTFlush<CR>\|:CommandT app/assets/javascripts<CR>
 map <leader>ff :CommandTFlush<CR>\|:CommandT features<CR>
-map <leader>fd :CommandTFlush<CR>\|:CommandT app/cells<CR>
-map <leader>fD :CommandTFlush<CR>\|:CommandT spec/cells<CR>
+map <leader>fe :CommandTFlush<CR>\|:CommandT app/cells<CR>
+map <leader>fE :CommandTFlush<CR>\|:CommandT spec/cells<CR>
+map <leader>fd :CommandTFlush<CR>\|:CommandT app/decorators<CR>
+map <leader>fD :CommandTFlush<CR>\|:CommandT spec/decorators<CR>
 map <leader>fg :topleft 100 :split Gemfile<CR>
 map <leader>f :CommandTFlush<CR>\|:CommandT<CR>
 map <leader>F :CommandTFlush<CR>\|:CommandT %%<CR>
