@@ -8,7 +8,7 @@ DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(vi-mode git brew gem bundle)
+plugins=(vi-mode rbenv git brew gem bundle)
 
 source $ZSH/oh-my-zsh.sh
 
