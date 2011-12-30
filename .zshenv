@@ -14,6 +14,11 @@ export SPEC_OPTS='-c'
 export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19 -Xint"
 
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+export active_ruby="$(rbenv version-name)"
+
 unsetopt auto_name_dirs
 
 alias vi=/usr/local/Cellar/macvim/7.3-63/MacVim.app/Contents/MacOS/Vim

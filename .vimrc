@@ -6,7 +6,6 @@ call pathogen#infect()
 "" General
 filetype plugin indent on
 set nocompatible                " Vim > Vi
-set shell=/bin/sh
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
