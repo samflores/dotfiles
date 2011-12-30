@@ -1,8 +1,12 @@
 let mapleader=","
 
+"" Pathogen
+call pathogen#infect()
+
 "" General
 filetype plugin indent on
 set nocompatible                " Vim > Vi
+set shell=/bin/sh
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
@@ -33,9 +37,6 @@ set hlsearch                    " highlight search
 set incsearch                   " incremental search
 set ignorecase                  " case insensitive search ...
 set smartcase                   " ... unless we have a capital letter
-
-"" Pathogen
-call pathogen#infect()
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
