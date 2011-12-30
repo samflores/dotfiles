@@ -25,6 +25,6 @@ alias vi=/usr/local/Cellar/macvim/7.3-63/MacVim.app/Contents/MacOS/Vim
 export EDITOR="vi"
 
 alias irb='irb --simple-prompt'
-alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.5/config/elasticsearch.yml'
+alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.6/config/elasticsearch.yml'
 alias pcat='pygmentize'
 
