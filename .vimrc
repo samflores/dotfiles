@@ -41,7 +41,6 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-call togglebg#map("<F5>")       " ... but allow bg toggle
 colorscheme solarized
 
 "" Jump to the laskt known cursor position on openning
