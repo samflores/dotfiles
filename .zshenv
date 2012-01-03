@@ -21,7 +21,6 @@ export active_ruby="$(rbenv version-name)"
 
 unsetopt auto_name_dirs
 
-alias vi=/usr/local/Cellar/macvim/7.3-63/MacVim.app/Contents/MacOS/Vim
 export EDITOR="vi"
 
 alias irb='irb --simple-prompt'
