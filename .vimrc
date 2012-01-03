@@ -40,8 +40,17 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-colorscheme solarized
-set t_Co=16
+colorscheme twilight256
+
+"" Underline bad spelled words - put here to override colorscheme settings
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
 
 "" Jump to the last known cursor position on opening
 autocmd BufReadPost *
@@ -57,6 +66,9 @@ autocmd BufWritePre *
       \ %s/\s\+$//e |
       \ let @/=_s |
       \ call cursor(l, c)
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "" Prevent buffer created by fugitive.vim from being hidden
 autocmd BufReadPost fugitive://*
