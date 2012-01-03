@@ -40,7 +40,15 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-colorscheme twilight256
+colorscheme desert
+
+"" Better colors for diff mode - put here to override colorscheme settings
+highlight DiffAdd	ctermbg=2 ctermfg=1
+highlight DiffChange	ctermbg=0
+
+"" Better colors for search highlights - put here to override colorscheme settings
+hi IncSearch	cterm=NONE ctermfg=white ctermbg=black
+hi Search	cterm=NONE ctermfg=white ctermbg=black
 
 "" Underline bad spelled words - put here to override colorscheme settings
 highlight clear SpellBad
