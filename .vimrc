@@ -43,13 +43,13 @@ set background=dark             " defaults to dark bg
 colorscheme solarized
 set t_Co=16
 
-"" Jump to the laskt known cursor position on openning
+"" Jump to the last known cursor position on opening
 autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
 
-"" Remove trailing whitespaces before saving
+"" Remove trailing white spaces before saving
 autocmd BufWritePre *
       \ let _s=@/ |
       \ let l = line(".") |
