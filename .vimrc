@@ -21,6 +21,9 @@ set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set hidden                      " I'm not sure I like this options, but giving it a try
 
+"" Sparkup mappingconflicts with autocompletion
+let g:sparkupNextMapping = ']s'
+
 "" Status Line
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%{exists('g:loaded_rbenv')?rbenv#statusline():''}%=%-16(\ %l,%c%V\ %)%P
