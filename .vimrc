@@ -5,6 +5,8 @@ call pathogen#infect()
 
 "" General
 filetype plugin indent on
+set winheight=30
+set winwidth=40
 set nocompatible                " Vim > Vi
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
@@ -87,3 +89,5 @@ command! W :w
 command! Wa :wa
 
 so ~/.vim/mappings-config.vim
+
+so ~/.vim/twitvim-config.vim
