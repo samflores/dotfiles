@@ -4,7 +4,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 "" General mappings
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
-imap ;; <ESC>:w<CR>
+inoremap ;; <ESC>
 
 "" Command-T mappings
 map <leader>fv :CommandTFlush<CR>\|:CommandT app/views<CR>
