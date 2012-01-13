@@ -54,11 +54,12 @@ nmap - ddkP
 nmap + ddp
 
 "" Force myself to use hjkl instead arrows
-nnoremap <Up> <Esc>
-inoremap <Up> <Esc>
-nnoremap <Down> <Esc>
-inoremap <Down> <Esc>
-nnoremap <Left> <Esc>
-inoremap <Left> <Esc>
-nnoremap <Right> <Esc>
-inoremap <Right> <Esc>
+nnoremap <Up> <nop>
+inoremap <Up> <nop>
+nnoremap <Down> <nop>
+inoremap <Down> <nop>
+nnoremap <Left> <nop>
+inoremap <Left> <nop>
+nnoremap <Right> <nop>
+inoremap <Right> <nop>
+
