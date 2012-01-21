@@ -10,7 +10,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Ruby interpreter & related options
 export SPEC_OPTS='-c'
 export RUBYOPT=-Ku
-export RBXOPT="-Xrbc.db=$HOME/.rbc -X19 -Xint"
+export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -24,4 +24,4 @@ export EDITOR="vi"
 alias irb='irb --simple-prompt'
 alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.6/config/elasticsearch.yml'
 alias pcat='pygmentize'
-
+alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
