@@ -5,7 +5,10 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap ;; <ESC>
-inoremap <ESC> <ESC>li
+vnoremap ;; <ESC>
+snoremap ;; <ESC>
+vnoremap ,w :w<CR>
+inoremap ;w <ESC>:w<CR>a
 
 "" Command-T mappings
 map <leader>fv :CommandTFlush<CR>\|:CommandT app/views<CR>
@@ -55,12 +58,21 @@ nmap - ddkP
 nmap + ddp
 
 "" Force myself to use hjkl instead arrows
-nnoremap <Up> <nop>
+noremap <Up> <nop>
 inoremap <Up> <nop>
-nnoremap <Down> <nop>
-inoremap <Down> <nop>
-nnoremap <Left> <nop>
-inoremap <Left> <nop>
-nnoremap <Right> <nop>
-inoremap <Right> <nop>
+snoremap <Up> <nop>
 
+noremap <Down> <nop>
+inoremap <Down> <nop>
+snoremap <Down> <nop>
+
+noremap <Left> <nop>
+inoremap <Left> <nop>
+snoremap <Left> <nop>
+
+noremap <Right> <nop>
+inoremap <Right> <nop>
+snoremap <Right> <nop>
+
+nnoremap 0 0w
+nnoremap 00 0
