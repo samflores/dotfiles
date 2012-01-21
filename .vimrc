@@ -74,6 +74,9 @@ highlight PmenuSel ctermbg=13 ctermfg=0 guibg=Magenta
 "" Matching parenthesis
 highlight clear MatchParen
 highlight MatchParen term=underline cterm=underline
+
+autocmd TabEnter,WinEnter,BufWinEnter *.html,*.erb let g:html_indent_tags = g:html_indent_tags.'\|p\|li'
+
 "" Jump to the last known cursor position on opening
 autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
