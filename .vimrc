@@ -21,7 +21,7 @@ set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set hidden                      " I'm not sure I like this options, but giving it a try
 
-"" Sparkup mappingconflicts with autocompletion
+"" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
 
 "" Status Line
