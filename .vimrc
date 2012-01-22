@@ -5,8 +5,8 @@ call pathogen#infect()
 
 "" General
 filetype plugin indent on
-set winheight=30
-set winwidth=40
+let &winheight=&lines*2/3
+let &winwidth=&columns*2/3
 set nocompatible                " Vim > Vi
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
@@ -47,7 +47,15 @@ syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
 colorscheme solarized
 
+"" Indent <p> and <li> tags
 autocmd TabEnter,WinEnter,BufWinEnter *.html,*.erb let g:html_indent_tags = g:html_indent_tags.'\|p\|li'
+
+"" Set winheight and winwidth after terminal resize
+autocmd VimResized *
+      \ let &winheight=&lines*2/3 |
+      \ let &winwidth=&columns*2/3 |
+      \ wincmd l | wincmd h |
+      \ wincmd j | wincmd k
 
 "" Jump to the last known cursor position on opening
 autocmd BufReadPost *
@@ -79,5 +87,4 @@ command! Wa :wa
 
 " so ~/.vim/colors-tweaks.vim
 so ~/.vim/mappings-config.vim
-
 so ~/.vim/twitvim-config.vim
