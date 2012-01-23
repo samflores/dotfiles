@@ -58,6 +58,12 @@ map <leader>em :vsplit ~/.vim/mappings-config.vim<CR>
 nmap - ddkP2==
 nmap + ddpk2==j
 
+"" Move between split windows
+nnoremap <silent> <leader>h :wincmd h<cr>
+nnoremap <silent> <leader>j :wincmd j<cr>
+nnoremap <silent> <leader>k :wincmd k<cr>
+nnoremap <silent> <leader>l :wincmd l<cr>
+
 "" Force myself to use hjkl instead arrows
 noremap <Up> <nop>
 inoremap <Up> <nop>
