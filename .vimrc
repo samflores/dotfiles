@@ -27,9 +27,6 @@ let g:sparkupNextMapping = ']s'
 "" Add an space after comment chars
 let NERDSpaceDelims=1
 
-"" Smartest completion trigger
-let g:SuperTabDefaultCompletionType = "context"
-
 "" Status Line
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%{exists('g:loaded_rbenv')?rbenv#statusline():''}%=%-16(\ %l,%c%V\ %)%P
