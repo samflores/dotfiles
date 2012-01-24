@@ -22,6 +22,6 @@ unsetopt auto_name_dirs
 export EDITOR="vi"
 
 alias irb='irb --simple-prompt'
-alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.6/config/elasticsearch.yml'
+alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.7/config/elasticsearch.yml'
 alias pcat='pygmentize'
 alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
