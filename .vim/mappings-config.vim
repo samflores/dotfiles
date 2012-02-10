@@ -4,9 +4,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 "" General mappings
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
-inoremap ;; <ESC>
-vnoremap ;; <ESC>
-snoremap ;; <ESC>
+inoremap jk <ESC>
+vnoremap jk <ESC>
+snoremap jk <ESC>
 vnoremap ,w :w<CR>
 inoremap ;w <ESC>:w<CR>a
 
