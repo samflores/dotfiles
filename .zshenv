@@ -19,6 +19,7 @@ export active_ruby="$(rbenv version-name)"
 
 unsetopt auto_name_dirs
 
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export EDITOR="vi"
 
 alias irb='irb --simple-prompt'
