@@ -27,6 +27,10 @@ alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.
 alias pcat='pygmentize'
 alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
 
+if [[ -s $HOME/.ec2/samflores_aws ]] then
+  source $HOME/.ec2/samflores_aws
+fi
+
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
