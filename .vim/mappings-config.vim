@@ -5,9 +5,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap jk <ESC>
-vnoremap jk <ESC>
-snoremap jk <ESC>
-vnoremap ,w :w<CR>
 inoremap ;w <ESC>:w<CR>a
 
 "" Command-T mappings
