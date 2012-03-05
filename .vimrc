@@ -88,6 +88,6 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 command! W :w
 command! Wa :wa
 
-" so ~/.vim/colors-tweaks.vim
+so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim
 so ~/.vim/twitvim-config.vim
