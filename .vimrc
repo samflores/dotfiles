@@ -75,6 +75,8 @@ autocmd BufWritePre *
       \ let @/=_s |
       \ call cursor(l, c)
 
+autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
+
 autocmd BufWritePost ~/.vimrc source %
 autocmd BufWritePost ~/.vim/*.vim source %
 
