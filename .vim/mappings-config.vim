@@ -78,6 +78,6 @@ noremap <Right> <nop>
 inoremap <Right> <nop>
 snoremap <Right> <nop>
 
-nnoremap 0 0w
+nnoremap 0 ^
 nnoremap 00 0
 nnoremap <silent> <leader>C :noh<CR>
