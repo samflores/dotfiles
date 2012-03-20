@@ -50,9 +50,6 @@ syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
 colorscheme solarized
 
-"" Indent <p> and <li> tags
-autocmd TabEnter,WinEnter,BufWinEnter *.html,*.erb let g:html_indent_tags = g:html_indent_tags.'\|p\|li'
-
 "" Set winheight and winwidth after terminal resize
 autocmd VimResized *
       \ let &winheight=&lines*2/3 |
@@ -74,8 +71,6 @@ autocmd BufWritePre *
       \ %s/\s\+$//e |
       \ let @/=_s |
       \ call cursor(l, c)
-
-autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
 autocmd BufWritePost ~/.vimrc source %
 autocmd BufWritePost ~/.vim/*.vim source %
