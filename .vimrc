@@ -20,6 +20,8 @@ set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set hidden                      " I'm not sure I like this options, but giving it a try
+set splitbelow
+set splitright
 
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
