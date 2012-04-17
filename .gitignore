@@ -8,3 +8,4 @@
 !.gitignore_global
 !.vim
 !.vim/*-config.vim
+!.vim/Vimfile

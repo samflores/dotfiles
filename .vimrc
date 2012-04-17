@@ -1,7 +1,11 @@
 let mapleader=","
+filetype off
 
-"" Pathogen
-call pathogen#infect()
+"" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+source ~/.vim/Vimfile
 
 "" General
 filetype plugin indent on
@@ -24,6 +28,7 @@ set wildignore+=*.png,*.jpg
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
+set viminfo='1000,f1,<500,:100,@10,@10
 
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
