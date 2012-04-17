@@ -19,6 +19,8 @@ set timeoutlen=500              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
+set wildignore+=public/assets/**,public/sprockets/**
+set wildignore+=*.png,*.jpg
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
@@ -31,7 +33,7 @@ let NERDSpaceDelims=1
 
 "" Status Line
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%{exists('g:loaded_rbenv')?rbenv#statusline():''}%=%-16(\ %l,%c%V\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
 
 "" Whitespace & Indentation
 set autoindent                  " do I need to say what does that mean?
@@ -50,7 +52,7 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-colorscheme solarized
+colorscheme desert
 
 "" Set winheight and winwidth after terminal resize
 autocmd VimResized *
