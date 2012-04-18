@@ -13,7 +13,8 @@ export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
 
 # rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
+export RBENV_ROOT="/usr/local/rbenv"
+export PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 export active_ruby="$(rbenv version-name)"
 
@@ -26,6 +27,7 @@ alias irb='irb --simple-prompt'
 alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.7/config/elasticsearch.yml'
 alias pcat='pygmentize'
 alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+alias tmux="tmux -2"
 
 if [[ -s $HOME/.ec2/samflores_aws ]] then
   source $HOME/.ec2/samflores_aws

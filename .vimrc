@@ -47,8 +47,8 @@ set smartcase                   " ... unless we have a capital letter
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
-set background=dark             " defaults to dark bg
-colorscheme solarized
+set t_Co=256
+colorscheme xoria256
 
 "" Indent <p> and <li> tags
 autocmd TabEnter,WinEnter,BufWinEnter *.html,*.erb let g:html_indent_tags = g:html_indent_tags.'\|p\|li'
@@ -78,8 +78,8 @@ autocmd BufWritePre *
 autocmd BufWritePost ~/.vimrc source %
 autocmd BufWritePost ~/.vim/*.vim source %
 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+autocmd InsertEnter * silent execute "!/usr/local/bin/beam_cursor.sh"
+autocmd InsertLeave * silent execute "!/usr/local/bin/block_cursor.sh"
 
 "" Prevent buffer created by fugitive.vim from being hidden
 autocmd BufReadPost fugitive://* set bufhidden=delete

@@ -1,12 +1,12 @@
-ZSH=$HOME/Projects/Misc/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="kong"
+ZSH_THEME="gallois"
 
 CASE_SENSITIVE="true"
 
 DISABLE_AUTO_UPDATE="true"
 
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 plugins=(vi-mode git brew gem bundle)
 
