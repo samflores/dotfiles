@@ -1,40 +1,25 @@
-"" vundle
 Bundle "gmarik/vundle.git"
-"" NERDCommenter
-Bundle "scrooloose/nerdcommenter.git"
-"" command-t
-Bundle "git://git.wincent.com/command-t.git"
-"" dbext
 Bundle "dbext.vim"
-"" html5.vim
-Bundle "othree/html5.vim.git"
-"" mustache.vim
-Bundle "juvenn/mustache.vim.git"
-"" supertab
+Bundle "scrooloose/nerdcommenter.git"
+Bundle "git://git.wincent.com/command-t.git"
 Bundle "ervandew/supertab.git"
-"" surround
 Bundle "tpope/vim-surround.git"
-"" syntastic
-Bundle "scrooloose/syntastic.git"
-"" tabular
-Bundle "godlygeek/tabular.git"
-"" unimpaired
-Bundle "tpope/vim-unimpaired.git"
-"" vim-abolish
-Bundle "tpope/vim-abolish.git"
-"" vim-css3-syntax
-Bundle "hail2u/vim-css3-syntax.git"
-"" vim-easymotion
 Bundle "Lokaltog/vim-easymotion.git"
-"" vim-fugitive
 Bundle "tpope/vim-fugitive.git"
-"" vim-minitest
-Bundle "sunaku/vim-ruby-minitest.git"
-"" vim-rails
 Bundle "tpope/vim-rails.git"
-"" vim-ruby
 Bundle "vim-ruby/vim-ruby.git"
-"" vim-sparkup
+Bundle "mileszs/ack.vim.git"
+Bundle "msanders/snipmate.vim.git"
+
+Bundle "othree/html5.vim.git"
+Bundle "juvenn/mustache.vim.git"
+" Bundle "scrooloose/syntastic.git"
+Bundle "godlygeek/tabular.git"
+Bundle "tpope/vim-unimpaired.git"
+Bundle "tpope/vim-abolish.git"
+Bundle "hail2u/vim-css3-syntax.git"
+Bundle "sunaku/vim-ruby-minitest.git"
 Bundle "kogakure/vim-sparkup.git"
-"" vim-specky
-Bundle "Specky"
+
+" vim: set filetype=vim :
+" vim: set nospell :
