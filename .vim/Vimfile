@@ -1,0 +1,25 @@
+Bundle "gmarik/vundle.git"
+Bundle "dbext.vim"
+Bundle "scrooloose/nerdcommenter.git"
+Bundle "git://git.wincent.com/command-t.git"
+Bundle "ervandew/supertab.git"
+Bundle "tpope/vim-surround.git"
+Bundle "Lokaltog/vim-easymotion.git"
+Bundle "tpope/vim-fugitive.git"
+Bundle "tpope/vim-rails.git"
+Bundle "vim-ruby/vim-ruby.git"
+Bundle "mileszs/ack.vim.git"
+Bundle "msanders/snipmate.vim.git"
+
+Bundle "othree/html5.vim.git"
+Bundle "juvenn/mustache.vim.git"
+" Bundle "scrooloose/syntastic.git"
+Bundle "godlygeek/tabular.git"
+Bundle "tpope/vim-unimpaired.git"
+Bundle "tpope/vim-abolish.git"
+Bundle "hail2u/vim-css3-syntax.git"
+Bundle "sunaku/vim-ruby-minitest.git"
+Bundle "kogakure/vim-sparkup.git"
+
+" vim: set filetype=vim :
+" vim: set nospell :

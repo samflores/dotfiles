@@ -1,7 +1,11 @@
 let mapleader=","
+filetype off
 
-"" Pathogen
-call pathogen#infect()
+"" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+source ~/.vim/Vimfile
 
 "" General
 filetype plugin indent on
@@ -19,7 +23,12 @@ set timeoutlen=500              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
+set wildignore+=public/assets/**,public/sprockets/**
+set wildignore+=*.png,*.jpg
 set hidden                      " I'm not sure I like this options, but giving it a try
+set splitbelow
+set splitright
+set viminfo='1000,f1,<500,:100,@10,@10
 
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
@@ -29,7 +38,7 @@ let NERDSpaceDelims=1
 
 "" Status Line
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%{exists('g:loaded_rbenv')?rbenv#statusline():''}%=%-16(\ %l,%c%V\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
 
 "" Whitespace & Indentation
 set autoindent                  " do I need to say what does that mean?
@@ -90,4 +99,3 @@ command! Wa :wa
 
 so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim
-so ~/.vim/twitvim-config.vim
