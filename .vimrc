@@ -67,7 +67,8 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-colorscheme desert
+colorscheme solarized
+nnoremap <silent> <leader>S :let &background = (&background == 'dark' ? 'light' : 'dark')<cr>
 
 "" Set winheight and winwidth after terminal resize
 autocmd VimResized *
