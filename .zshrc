@@ -8,7 +8,7 @@ DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(vi-mode git brew gem bundle zsh-syntax-highlighting)
+plugins=(vi-mode git brew gem bundle tmux zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
