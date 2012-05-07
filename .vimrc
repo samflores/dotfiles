@@ -71,20 +71,20 @@ colorscheme solarized
 nnoremap <silent> <leader>S :let &background = (&background == 'dark' ? 'light' : 'dark')<cr>
 
 "" Set winheight and winwidth after terminal resize
-autocmd VimResized *
+autocmd! VimResized *
       \ let &winheight=&lines*2/3 |
       \ let &winwidth=&columns*2/3 |
       \ wincmd l | wincmd h |
       \ wincmd j | wincmd k
 
 "" Jump to the last known cursor position on opening
-autocmd BufReadPost *
+autocmd! BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
 
 "" Remove trailing white spaces before saving
-autocmd BufWritePre *
+autocmd! BufWritePre *
       \ let _s=@/ |
       \ let l = line(".") |
       \ let c = col(".") |
@@ -92,14 +92,14 @@ autocmd BufWritePre *
       \ let @/=_s |
       \ call cursor(l, c)
 
-autocmd BufWritePost ~/.vimrc source %
-autocmd BufWritePost ~/.vim/*.vim source %
+autocmd! BufWritePost ~/.vimrc source %
+autocmd! BufWritePost ~/.vim/*.vim source %
 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "" Prevent buffer created by fugitive.vim from being hidden
-autocmd BufReadPost fugitive://* set bufhidden=delete
+autocmd! BufReadPost fugitive://* set bufhidden=delete
 
 "" I ALWAYS type 'W' instead 'w'
 command! W :w
