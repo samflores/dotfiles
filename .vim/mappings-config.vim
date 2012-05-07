@@ -50,8 +50,9 @@ map <leader>gca :Gcommit --amend<CR>
 map <leader>gra :Git ra<CR>
 
 "" Quickly edit configuration files
-map <leader>ev :vsplit ~/.vimrc<CR>
-map <leader>em :vsplit ~/.vim/mappings-config.vim<CR>
+map <leader>vv :vsplit ~/.vimrc |\ set bufhidden=delete<CR>
+map <leader>vm :vsplit ~/.vim/mappings-config.vim |\ set bufhidden=delete<CR>
+map <leader>vb :vsplit ~/.vim/Vimfile |\ set bufhidden=delete<CR>
 
 "" Move lines
 nmap - ddkP2==
