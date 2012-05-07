@@ -33,6 +33,16 @@ set viminfo='1000,f1,<500,:100,@10,@10
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
 
+"" Option for Eclipse projects
+let g:ctrlp_root_markers = ['.project']
+
+"" DBExt
+let g:dbext_default_history_file = '.dbext_history'
+
+"" ConqueTerm
+let g:ConqueTerm_InsertOnEnter = 1
+let g:ConqueTerm_CloseOnEnd = 1
+
 "" Add an space after comment chars
 let NERDSpaceDelims=1
 
