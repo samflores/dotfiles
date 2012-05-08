@@ -33,7 +33,9 @@ set viminfo='1000,f1,<500,:100,@10,@10
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
 
-"" Option for Eclipse projects
+"" Disable CtrlP default mapping
+let g:ctrlp_map = ''
+"" Mark Eclipse projects as CtrlP root
 let g:ctrlp_root_markers = ['.project']
 
 "" DBExt
