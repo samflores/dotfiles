@@ -9,3 +9,4 @@
 !.vim
 !.vim/*-config.vim
 !.vim/Vimfile
+!.tmux.conf
