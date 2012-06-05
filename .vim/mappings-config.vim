@@ -5,7 +5,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap jk <ESC>
-inoremap ;w <ESC>:w<CR>a
 
 "" File finder mappings
 map <leader>ov :CtrlP app/views<CR>
@@ -30,7 +29,7 @@ map <leader>oE :CtrlP spec/cells<CR>
 map <leader>od :CtrlP app/decorators<CR>
 map <leader>oD :CtrlP spec/decorators<CR>
 map <leader>og :topleft 100 :split Gemfile<CR>
-map <leader>o :CtrlP<CR>
+map <leader>oo :CtrlP<CR>
 map <leader>O :CtrlP %%<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>m :CtrlPMRU<CR>
