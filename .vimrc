@@ -31,6 +31,7 @@ set splitbelow
 set splitright
 set viminfo='1000,f1,<500,:100,@10,@10
 
+let g:is_mzscheme = 1
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
 
