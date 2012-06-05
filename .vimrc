@@ -1,4 +1,5 @@
 let mapleader=","
+set nocompatible                " Vim > Vi
 filetype off
 
 "" Vundle
@@ -11,7 +12,6 @@ source ~/.vim/Vimfile
 filetype plugin indent on
 let &winheight=&lines*2/3
 let &winwidth=&columns*2/3
-set nocompatible                " Vim > Vi
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
