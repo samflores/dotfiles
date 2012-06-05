@@ -1,4 +1,4 @@
-ZSH=$HOME/Projects/Misc/oh-my-zsh
+ZSH=$HOME/.omz
 
 ZSH_THEME="kong"
 
