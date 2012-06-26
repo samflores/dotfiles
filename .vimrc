@@ -109,5 +109,6 @@ autocmd! BufReadPost fugitive://* set bufhidden=delete
 command! W :w
 command! Wa :wa
 
+so ~/.vim/test-runner.vim
 so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim

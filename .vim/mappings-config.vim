@@ -39,7 +39,7 @@ map <leader>. :A<CR>
 map <leader>/ :R<CR>
 nmap <leader>r :wa\|!rspec -I. -Ispec %<CR>
 
-"" Fugitive mapping
+"" Fugitive mappings
 map <leader>gst :Gstatus<CR>
 map <leader>ga  :Gwrite<CR>
 map <leader>gco :Gread<CR>
@@ -49,13 +49,10 @@ map <leader>gca :Gcommit --amend<CR>
 map <leader>gra :Git ra<CR>
 
 "" Quickly edit configuration files
-map <leader>vv :vsplit ~/.vimrc \| set bufhidden=delete<CR>
-map <leader>vm :vsplit ~/.vim/mappings-config.vim \| set bufhidden=delete<CR>
-map <leader>vb :vsplit ~/.vim/Vimfile \| set bufhidden=delete<CR>
-
-"" Move lines
-nmap - ddkP2==
-nmap + ddpk2==j
+map <leader>vv :vsplit ~/.vimrc\|set bufhidden=delete<CR>
+map <leader>vm :vsplit ~/.vim/mappings-config.vim\|set bufhidden=delete<CR>
+map <leader>vt :vsplit ~/.vim/test-runner.vim\|set bufhidden=delete<CR>
+map <leader>vb :vsplit ~/.vim/Vimfile\|set bufhidden=delete<CR>
 
 "" Move between split windows
 nnoremap <silent> <leader>h :wincmd h<cr>
@@ -87,3 +84,12 @@ snoremap <Right> <nop>
 nnoremap 0 ^
 nnoremap 00 0
 nnoremap <silent> <leader>C :noh<CR>
+
+nnoremap <silent> <leader>B :let bg = (&background == "light" ? "dark" : "light") \| echom bg \| exec "set background=" . bg . " \| echom &background \| let $TERMBG=bg \| !cp ~/.config/Terminal/terminalrc." . bg . " ~/.config/Terminal/terminalrc"<cr><cr>
+
+"" Run Ruby tests
+map <silent> <leader>r :call RunTestFile()<cr>
+map <silent> <leader>R :call RunNearestTest()<cr>
+map <silent> <leader>a :call RunTests('')<cr>
+map <silent> <leader>c :w\|:!script/features<cr>
+map <silent> <leader>w :w\|:!script/features --profile wip<cr>
