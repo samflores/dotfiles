@@ -8,32 +8,33 @@ inoremap jk <ESC>
 inoremap ;w <ESC>:w<CR>a
 
 "" Command-T mappings
-if exists('g:autoloaded_rails') || &cp
-  map <leader>fv :CommandTFlush<CR>\|:CommandT app/views<CR>
-  map <leader>fV :CommandTFlush<CR>\|:CommandT spec/views<CR>
-  map <leader>fc :CommandTFlush<CR>\|:CommandT app/controllers<CR>
-  map <leader>fC :CommandTFlush<CR>\|:CommandT spec/controllers<CR>
-  map <leader>fm :CommandTFlush<CR>\|:CommandT app/models<CR>
-  map <leader>fM :CommandTFlush<CR>\|:CommandT spec/models<CR>
-  map <leader>fr :topleft 100 :split config/routes.rb<CR>
-  map <leader>fR :CommandTFlush<CR>\|:CommandT spec/requests<CR>
-  map <leader>fh :CommandTFlush<CR>\|:CommandT app/helpers<CR>
-  map <leader>fH :CommandTFlush<CR>\|:CommandT spec/helpers<CR>
-  map <leader>fl :CommandTFlush<CR>\|:CommandT lib<CR>
-  map <leader>fL :CommandTFlush<CR>\|:CommandT spec/lib<CR>
-  map <leader>fp :CommandTFlush<CR>\|:CommandT public<CR>
-  map <leader>fs :CommandTFlush<CR>\|:CommandT public/stylesheets<CR>
-  map <leader>fS :CommandTFlush<CR>\|:CommandT app/assets/stylesheets<CR>
-  map <leader>fJ :CommandTFlush<CR>\|:CommandT app/assets/javascripts<CR>
-  map <leader>ff :CommandTFlush<CR>\|:CommandT features<CR>
-  map <leader>fe :CommandTFlush<CR>\|:CommandT app/cells<CR>
-  map <leader>fE :CommandTFlush<CR>\|:CommandT spec/cells<CR>
-  map <leader>fd :CommandTFlush<CR>\|:CommandT app/decorators<CR>
-  map <leader>fD :CommandTFlush<CR>\|:CommandT spec/decorators<CR>
-  map <leader>fg :topleft 100 :split Gemfile<CR>
-endif
-map <leader>f :CommandTFlush<CR>\|:CommandT<CR>
-map <leader>F :CommandTFlush<CR>\|:CommandT %%<CR>
+map <leader>ov :CtrlP app/views<CR>
+map <leader>oV :CtrlP spec/views<CR>
+map <leader>oc :CtrlP app/controllers<CR>
+map <leader>oC :CtrlP spec/controllers<CR>
+map <leader>om :CtrlP app/models<CR>
+map <leader>oM :CtrlP spec/models<CR>
+map <leader>or :topleft 100 :split config/routes.rb<CR>
+map <leader>oR :CtrlP spec/requests<CR>
+map <leader>oh :CtrlP app/helpers<CR>
+map <leader>oH :CtrlP spec/helpers<CR>
+map <leader>ol :CtrlP lib<CR>
+map <leader>oL :CtrlP spec/lib<CR>
+map <leader>op :CtrlP public<CR>
+map <leader>os :CtrlP public/stylesheets<CR>
+map <leader>oS :CtrlP app/assets/stylesheets<CR>
+map <leader>oJ :CtrlP app/assets/javascripts<CR>
+map <leader>of :CtrlP features<CR>
+map <leader>oe :CtrlP app/cells<CR>
+map <leader>oE :CtrlP spec/cells<CR>
+map <leader>od :CtrlP app/decorators<CR>
+map <leader>oD :CtrlP spec/decorators<CR>
+map <leader>og :topleft 100 :split Gemfile\|set bufhidden=delete<CR>
+map <leader>ob :CtrlPBuffer<CR>
+map <leader>ou :CtrlPMRU<CR>
+map <leader>ot :CtrlPBufTag<CR>
+map <leader>oo :CtrlP<CR>
+map <leader>o. :CtrlP %%<CR>
 
 "" Vim-Rails mappings
 map <leader>. :A<CR>
@@ -50,12 +51,9 @@ map <leader>gca :Gcommit --amend<CR>
 map <leader>gra :Git ra<CR>
 
 "" Quickly edit configuration files
-map <leader>ev :vsplit ~/.vimrc<CR>
-map <leader>em :vsplit ~/.vim/mappings-config.vim<CR>
-
-"" Move lines
-nmap - ddkP2==
-nmap + ddpk2==j
+map <leader>vv :vsplit ~/.vimrc\|set bufhidden=delete<CR>
+map <leader>vm :vsplit ~/.vim/mappings-config.vim\|set bufhidden=delete<CR>
+map <leader>vb :vsplit ~/.vim/Vimfile\|set bufhidden=delete<CR>
 
 "" Move between split windows
 nnoremap <silent> <leader>h :wincmd h<cr>
@@ -83,3 +81,6 @@ snoremap <Right> <nop>
 nnoremap 0 ^
 nnoremap 00 0
 nnoremap <silent> <leader>C :noh<CR>
+
+nnoremap <silent> <leader>B :let bg = (&background == "light" ? "dark" : "light") \| echom bg \| exec "set background=" . bg . " \| echom &background \| let $TERMBG=bg \| !cp ~/.config/Terminal/terminalrc." . bg . " ~/.config/Terminal/terminalrc"<cr><cr>
+
