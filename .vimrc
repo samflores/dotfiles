@@ -28,6 +28,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.class
 set wildignore+=.classpath,.project
 set wildignore+=.settings/**/*.prefs
+set wildignore+=bin
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
@@ -36,9 +37,12 @@ set viminfo='1000,f1,<500,:100,@10,@10
 "" Sparkup mapping conflicts with autocompletion
 " let g:sparkupNextMapping = ']s'
 let g:ctrlp_root_markers = ['.project']
+let g:ctrlp_mruf_relative = 1
 
 "" Add an space after comment chars
 let NERDSpaceDelims=1
+
+let g:is_mzscheme=1
 
 "" Status Line
 set laststatus=2
@@ -61,7 +65,7 @@ set smartcase                   " ... unless we have a capital letter
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set t_Co=16
-set background=dark
+let &background=substitute(system("head -1 ~/.config/Terminal/terminalrc |cut -d '#' -f 2"), "\n", "", "")
 colorscheme solarized
 
 "" Set winheight and winwidth after terminal resize
