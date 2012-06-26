@@ -8,7 +8,7 @@ highlight Search	cterm=NONE ctermfg=black ctermbg=white
 
 " Underline bad spelled words - put here to override colorscheme settings
 highlight clear SpellBad
-highlight SpellBad term=underline cterm=underline ctermfg=1
+highlight SpellBad term=underline cterm=underline
 highlight clear SpellCap
 highlight SpellCap term=underline cterm=underline
 highlight clear SpellRare
