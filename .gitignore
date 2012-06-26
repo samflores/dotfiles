@@ -8,5 +8,6 @@
 !.gitignore_global
 !.vim
 !.vim/*-config.vim
+!.vim/test-runner.vim
 !.vim/Vimfile
 !.tmux.conf
