@@ -5,9 +5,8 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap jk <ESC>
-inoremap ;w <ESC>:w<CR>a
 
-"" Command-T mappings
+"" File finder mappings
 map <leader>ov :CtrlP app/views<CR>
 map <leader>oV :CtrlP spec/views<CR>
 map <leader>oc :CtrlP app/controllers<CR>
@@ -60,6 +59,10 @@ nnoremap <silent> <leader>h :wincmd h<cr>
 nnoremap <silent> <leader>j :wincmd j<cr>
 nnoremap <silent> <leader>k :wincmd k<cr>
 nnoremap <silent> <leader>l :wincmd l<cr>
+nnoremap <silent> <leader>H :wincmd H<cr>
+nnoremap <silent> <leader>J :wincmd J<cr>
+nnoremap <silent> <leader>K :wincmd K<cr>
+nnoremap <silent> <leader>L :wincmd L<cr>
 
 "" Force myself to use hjkl instead arrows
 noremap <Up> <nop>
