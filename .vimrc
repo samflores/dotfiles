@@ -18,7 +18,7 @@ set showcmd                     " display incomplete commands
 set number                      " show line number
 set wildmenu                    " cycle on tab completion
 set shortmess=atI               " short messages
-set clipboard=unnamed           " yank to clipboard
+set clipboard=unnamedplus       " yank to clipboard
 set timeoutlen=500              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
