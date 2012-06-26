@@ -37,7 +37,6 @@ map <leader>m :CtrlPMRU<CR>
 "" Vim-Rails mappings
 map <leader>. :A<CR>
 map <leader>/ :R<CR>
-nmap <leader>r :wa\|!rspec -I. -Ispec %<CR>
 
 "" Fugitive mappings
 map <leader>gst :Gstatus<CR>
@@ -66,20 +65,9 @@ nnoremap <silent> <leader>L :wincmd L<cr>
 
 "" Force myself to use hjkl instead arrows
 noremap <Up> <nop>
-inoremap <Up> <nop>
-snoremap <Up> <nop>
-
 noremap <Down> <nop>
-inoremap <Down> <nop>
-snoremap <Down> <nop>
-
 noremap <Left> <nop>
-inoremap <Left> <nop>
-snoremap <Left> <nop>
-
 noremap <Right> <nop>
-inoremap <Right> <nop>
-snoremap <Right> <nop>
 
 nnoremap 0 ^
 nnoremap 00 0
