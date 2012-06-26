@@ -17,6 +17,8 @@ set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
 set number                      " show line number
 set wildmenu                    " cycle on tab completion
+set wildmode=list:longest
+set completeopt=longest,menuone
 set shortmess=atI               " short messages
 set clipboard=unnamedplus       " yank to clipboard
 set timeoutlen=500              " don't wait too much
