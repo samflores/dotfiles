@@ -11,7 +11,7 @@ function! RunTestFile(...)
     call SetTestFile()
   elseif !exists("t:grb_test_file")
     return
-  end
+  endif
   call RunTests(t:grb_test_file . command_suffix)
 endfunction
 
@@ -28,17 +28,19 @@ endfunction
 function! RunTests(filename)
   " Write the file and run tests for the given filename
   :w
-  if match(a:filename, '\.feature$') != -1
-    exec ":!ruby -I. -S cucumber " . a:filename
-  elseif match(a:filename, '_mspec\.rb$')
-    exec ":!ruby -I. -rcolorific " . a:filename
+  if match(a:filename, '.feature$') != -1
+    let cmd = 'ruby -I. -S cucumber '
+  elseif match(a:filename, '_mspec.rb$') != -1
+    let cmd = 'ruby -I. '
   else
     if filereadable("script/test")
-      exec ":!script/test " . a:filename
-    elseif filereadable("Gemfile")
-      exec ":!bundle exec rspec --color " . a:filename
+      let cmd = 'script/test '
     else
-      exec ":!rspec --color " . a:filename
-    end
-  end
+      let cmd = 'rspec --color '
+    endif
+  endif
+  if filereadable("Gemfile") && !exists('g:skip_bundler')
+    let cmd = 'bundle exec ' . cmd
+  endif
+  exec ':!' . cmd . a:filename
 endfunction
