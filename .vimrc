@@ -118,7 +118,9 @@ autocmd! BufReadPost fugitive://* set bufhidden=delete
 "" I ALWAYS type 'W' instead 'w'
 command! W :w
 command! Wa :wa
+command! Ww :silent execute 'w !sudo tee %>/dev/null' | e!
 
+so ~/.vim/close-hidden.vim
 so ~/.vim/test-runner.vim
 so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim

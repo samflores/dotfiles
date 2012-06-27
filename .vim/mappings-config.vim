@@ -5,6 +5,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap jk <ESC>
+nnoremap <leader>ch :CloseHiddenBuffers
 
 "" File finder mappings
 map <leader>ov :CtrlP app/views<CR>
@@ -82,4 +83,3 @@ map <silent> <leader>R :call RunNearestTest()<cr>
 map <silent> <leader>a :call RunTests('')<cr>
 map <silent> <leader>c :w\|:!script/features<cr>
 map <silent> <leader>w :w\|:!script/features --profile wip<cr>
-
