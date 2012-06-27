@@ -12,6 +12,7 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'godlygeek/tabular.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-abolish.git'
+Bundle 'tpopr/vim-repeat.git'
 Bundle 'rson/vim-conque.git'
 
 " validator, db, twitter, clojure, ruby, rails, html, web, css, java
