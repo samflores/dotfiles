@@ -5,6 +5,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nnoremap <leader><leader> <c-^>
 map <leader>i :set list!<CR>
 inoremap jk <ESC>
+nnoremap <leader>ch :CloseHiddenBuffers
 
 "" File finder mappings
 map <leader>ov :CtrlP app/views<CR>

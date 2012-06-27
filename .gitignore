@@ -9,5 +9,6 @@
 !.vim
 !.vim/*-config.vim
 !.vim/test-runner.vim
+!.vim/close-hidden.vim
 !.vim/Vimfile
 !.tmux.conf
