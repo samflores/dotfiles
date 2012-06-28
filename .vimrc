@@ -39,11 +39,6 @@ let g:is_mzscheme = 1
 "" Sparkup mapping conflicts with autocompletion
 let g:sparkupNextMapping = ']s'
 
-"" Disable CtrlP default mapping
-let g:ctrlp_map = ''
-"" Mark Eclipse projects as CtrlP root
-let g:ctrlp_root_markers = ['.project']
-
 "" DBExt
 let g:dbext_default_history_file = '.dbext_history'
 
@@ -118,3 +113,4 @@ so ~/.vim/close-hidden.vim
 so ~/.vim/test-runner.vim
 so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim
+so ~/.vim/ctrlp-config.vim
