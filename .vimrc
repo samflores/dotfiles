@@ -12,6 +12,8 @@ source ~/.vim/Vimfile
 filetype plugin indent on
 let &winheight=&lines*2/3
 let &winwidth=&columns*2/3
+set undofile
+set undodir=~/.vim/undos
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
@@ -36,29 +38,6 @@ set splitbelow
 set splitright
 set viminfo='1000,f1,<500,:100,@10,@10
 
-let g:is_mzscheme = 1
-"" Sparkup mapping conflicts with autocompletion
-" let g:sparkupNextMapping = ']s'
-let g:ctrlp_root_markers = ['.project']
-let g:ctrlp_mruf_relative = 1
-
-"" Disable CtrlP default mapping
-let g:ctrlp_map = ''
-"" Mark Eclipse projects as CtrlP root
-let g:ctrlp_root_markers = ['.project']
-
-"" DBExt
-let g:dbext_default_history_file = '.dbext_history'
-
-"" ConqueTerm
-let g:ConqueTerm_InsertOnEnter = 1
-let g:ConqueTerm_CloseOnEnd = 1
-
-"" Add an space after comment chars
-let NERDSpaceDelims=1
-
-let g:is_mzscheme=1
-
 "" Status Line
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
@@ -76,6 +55,18 @@ set hlsearch                    " highlight search
 set incsearch                   " incremental search
 set ignorecase                  " case insensitive search ...
 set smartcase                   " ... unless we have a capital letter
+
+let g:is_mzscheme = 1
+
+"" DBExt
+let g:dbext_default_history_file = '.dbext_history'
+
+"" ConqueTerm
+let g:ConqueTerm_InsertOnEnter = 1
+let g:ConqueTerm_CloseOnEnd = 1
+
+"" Add an space after comment chars
+let NERDSpaceDelims=1
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
@@ -124,3 +115,4 @@ so ~/.vim/close-hidden.vim
 so ~/.vim/test-runner.vim
 so ~/.vim/colors-config.vim
 so ~/.vim/mappings-config.vim
+so ~/.vim/ctrlp-config.vim
