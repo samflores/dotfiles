@@ -27,6 +27,8 @@ set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
 set wildignore+=*.png,*.jpg,*.gif
+set undofile
+set undodir=~/.vim/undos
 set wildignore+=.project
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
