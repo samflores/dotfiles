@@ -39,8 +39,11 @@ function! RunTests(filename)
       let cmd = 'rspec --color '
     endif
   endif
-  if filereadable("Gemfile") && !exists('g:skip_bundler')
+  if filereadable("Gemfile") && (!exists('g:skip_bundler') || g:skip_bundler != 0)
     let cmd = 'bundle exec ' . cmd
   endif
+  if exists('g:time_tests') && g:time_tests != 0
+    let cmd = 'time ' . cmd
+  end
   exec ':!' . cmd . a:filename
 endfunction
