@@ -12,6 +12,8 @@ source ~/.vim/Vimfile
 filetype plugin indent on
 let &winheight=&lines*2/3
 let &winwidth=&columns*2/3
+set undofile
+set undodir=~/.vim/undos
 set spell spelllang=en_us       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
@@ -27,27 +29,11 @@ set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
 set wildignore+=*.png,*.jpg,*.gif
-set undofile
-set undodir=~/.vim/undos
 set wildignore+=.project
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
 set viminfo='1000,f1,<500,:100,@10,@10
-
-let g:is_mzscheme = 1
-"" Sparkup mapping conflicts with autocompletion
-let g:sparkupNextMapping = ']s'
-
-"" DBExt
-let g:dbext_default_history_file = '.dbext_history'
-
-"" ConqueTerm
-let g:ConqueTerm_InsertOnEnter = 1
-let g:ConqueTerm_CloseOnEnd = 1
-
-"" Add an space after comment chars
-let NERDSpaceDelims=1
 
 "" Status Line
 set laststatus=2
@@ -66,6 +52,18 @@ set hlsearch                    " highlight search
 set incsearch                   " incremental search
 set ignorecase                  " case insensitive search ...
 set smartcase                   " ... unless we have a capital letter
+
+let g:is_mzscheme = 1
+
+"" DBExt
+let g:dbext_default_history_file = '.dbext_history'
+
+"" ConqueTerm
+let g:ConqueTerm_InsertOnEnter = 1
+let g:ConqueTerm_CloseOnEnd = 1
+
+"" Add an space after comment chars
+let NERDSpaceDelims=1
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
