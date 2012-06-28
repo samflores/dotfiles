@@ -7,28 +7,47 @@ map <leader>i :set list!<CR>
 inoremap jk <ESC>
 nnoremap <leader>ch :CloseHiddenBuffers
 
+"" Create CtrlP mappings if the given root directory exists
+function! DefineCtrlPMapping(keys, ...)
+let paths = copy(a:000)
+for path in paths
+  if isdirectory(path)
+    break
+  endif
+  unlet path
+endfor
+if exists('path')
+  execute "map <leader>". a:keys . " :CtrlP " . path . "<CR>"
+else
+  execute "map <leader>". a:keys . " :echo 'No valid directories (" . join(paths, ', ') . ")'<CR>"
+endif
+endfunction
+
 "" File finder mappings
-map <leader>ov :CtrlP app/views<CR>
-map <leader>oV :CtrlP spec/views<CR>
-map <leader>oc :CtrlP app/controllers<CR>
-map <leader>oC :CtrlP spec/controllers<CR>
-map <leader>om :CtrlP app/models<CR>
-map <leader>oM :CtrlP spec/models<CR>
+call DefineCtrlPMapping('ov', 'app/views', 'views')
+call DefineCtrlPMapping('oV', 'spec/views')
+call DefineCtrlPMapping('ot', 'app/templates', 'template')
+call DefineCtrlPMapping('oT', 'spec/templates')
+call DefineCtrlPMapping('oc', 'app/controllers', '.')
+call DefineCtrlPMapping('oC', 'spec/controllers')
+call DefineCtrlPMapping('om', 'app/models', 'models')
+call DefineCtrlPMapping('oM', 'spec/models')
+call DefineCtrlPMapping('oR', 'spec/requests')
+call DefineCtrlPMapping('oh', 'app/helpers')
+call DefineCtrlPMapping('oH', 'spec/helpers')
+call DefineCtrlPMapping('ol', 'app/libs', 'libs', 'app/lib', 'lib')
+call DefineCtrlPMapping('oL', 'spec/libs', 'spec/lib')
+call DefineCtrlPMapping('op', 'public', '.')
+call DefineCtrlPMapping('os', 'app/assets/stylesheets', 'views/stylesheets', 'app/assets/css', 'views/css')
+call DefineCtrlPMapping('oS', 'public/stylesheets', 'public/css')
+call DefineCtrlPMapping('oj', 'app/assets/javascripts', 'views/javascripts', 'app/assets/js', 'views/js')
+call DefineCtrlPMapping('oJ', 'public/javascripts', 'public/js')
+call DefineCtrlPMapping('oF', 'features', 'spec/acceptance', 'spec/features')
+call DefineCtrlPMapping('oe', 'app/cells')
+call DefineCtrlPMapping('oE', 'spec/cells')
+call DefineCtrlPMapping('od', 'app/decorators', 'app/stylists')
+call DefineCtrlPMapping('oD', 'spec/decorators', 'spec/stylists')
 map <leader>or :topleft 100 :split config/routes.rb<CR>
-map <leader>oR :CtrlP spec/requests<CR>
-map <leader>oh :CtrlP app/helpers<CR>
-map <leader>oH :CtrlP spec/helpers<CR>
-map <leader>ol :CtrlP lib<CR>
-map <leader>oL :CtrlP spec/lib<CR>
-map <leader>op :CtrlP public<CR>
-map <leader>os :CtrlP public/stylesheets<CR>
-map <leader>oS :CtrlP app/assets/stylesheets<CR>
-map <leader>oJ :CtrlP app/assets/javascripts<CR>
-map <leader>of :CtrlP features<CR>
-map <leader>oe :CtrlP app/cells<CR>
-map <leader>oE :CtrlP spec/cells<CR>
-map <leader>od :CtrlP app/decorators<CR>
-map <leader>oD :CtrlP spec/decorators<CR>
 map <leader>og :topleft 100 :split Gemfile\|set bufhidden=delete<CR>
 map <leader>ob :CtrlPBuffer<CR>
 map <leader>ou :CtrlPMRU<CR>
