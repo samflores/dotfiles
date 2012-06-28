@@ -12,14 +12,14 @@ let g:ctrlp_status_func = {
 \ 'prog': 'CtrlPProgStatusLine',
 \ }
 
-function! CtrlP_Statusline_1(...)
+function! CtrlPMainStatusLine(...)
   let item = '%#Character# '.a:5.' %*'
   let marked = a:7 == ' <->' ? '' : a:7
   let dir = ' %=%<%#LineNr# '.getcwd().' %*'
   return item.marked.dir
 endfunction
 
-function! CtrlP_Statusline_2(...)
+function! CtrlPProgStatusLine(...)
   let len = '%#Function# '.a:1.' %*'
   let dir = ' %=%<%#LineNr# '.getcwd().' %*'
   return len.dir
