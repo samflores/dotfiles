@@ -98,7 +98,7 @@ nnoremap <silent> <leader>B :let bg = (&background == "light" ? "dark" : "light"
 
 "" Run Ruby tests
 map <silent> <leader>r :call RunTestFile()<cr>
-map <silent> <leader>R :call RunNearestTest()<cr>
+map <silent> <leader>R :call RunTestFile(1)<cr>
 map <silent> <leader>a :call RunTests('')<cr>
 map <silent> <leader>c :w\|:!script/features<cr>
 map <silent> <leader>w :w\|:!script/features --profile wip<cr>
