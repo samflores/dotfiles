@@ -7,20 +7,26 @@ map <leader>i :set list!<CR>
 inoremap jk <ESC>
 nnoremap <leader>ch :CloseHiddenBuffers
 
-"" Create CtrlP mappings if the given root directory exists
+"" Receives a list of directories as argument and executes CtrlP for the first one that exists
+function! CtrlPToDirList(...)
+  let paths = copy(a:000)
+  for path in paths
+    if isdirectory(path)
+      break
+    endif
+    unlet path
+  endfor
+  if exists('path')
+    execute "CtrlP " . path
+  else
+    execute "echo 'No valid directories (" . join(paths, ', ') . ")'"
+  end
+endfunction
+
+"" Associates a mapping to a list of directories
 function! DefineCtrlPMapping(keys, ...)
-let paths = copy(a:000)
-for path in paths
-  if isdirectory(path)
-    break
-  endif
-  unlet path
-endfor
-if exists('path')
-  execute "map <leader>". a:keys . " :CtrlP " . path . "<CR>"
-else
-  execute "map <leader>". a:keys . " :echo 'No valid directories (" . join(paths, ', ') . ")'<CR>"
-endif
+  let paths = copy(a:000)
+  execute "map <leader>" . a:keys . " :call CtrlPToDirList('" . join(paths, "', '") . "')<cr>"
 endfunction
 
 "" File finder mappings
