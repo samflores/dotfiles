@@ -28,7 +28,9 @@ set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
 set wildignore+=*.png,*.jpg,*.gif
-set wildignore+=.project
+set wildignore+=.project,*.lock
+set wildignore+=*.class,tags
+set wildignore+=.*
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
