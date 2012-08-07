@@ -26,7 +26,7 @@ endfunction
 "" File finder mappings
 call DefineCtrlPMapping('ov', 'app/views', 'views')
 call DefineCtrlPMapping('oV', 'spec/views')
-call DefineCtrlPMapping('ot', 'app/templates', 'template')
+call DefineCtrlPMapping('ot', 'app/templates', 'templates')
 call DefineCtrlPMapping('oT', 'spec/templates')
 call DefineCtrlPMapping('oc', 'app/controllers', '.')
 call DefineCtrlPMapping('oC', 'spec/controllers')
