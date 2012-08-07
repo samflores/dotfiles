@@ -31,15 +31,20 @@ endfunction
 function! RunTests(filename, single_test)
   :w
   if match(a:filename, '.feature$') != -1
-    let cmd = 'ruby -I. -S cucumber '
+    let cmd = 'ruby -I. -S cucumber --no-color '
+    let color_argument = ' --color '
   elseif match(a:filename, '_mspec.rb$') != -1
     let cmd = 'ruby -I. '
-  else
-    if filereadable("script/test")
-      let cmd = 'script/test '
-    else
-      let cmd = 'rspec --color '
-    endif
+    let color_argument = ' -r minitest/pride '
+  elseif match(a:filename, '_spec.rb$') != -1
+    let cmd = 'rspec '
+    let color_argument = ' --color '
+  elseif filereadable("script/test")
+    let cmd = 'script/test '
+  endif
+  if !exists('cmd')
+    echo 'No command to run'
+    return
   endif
   if filereadable("Gemfile") && (!exists('g:skip_bundler') || g:skip_bundler == 0)
     let cmd = 'bundle exec ' . cmd
@@ -48,6 +53,9 @@ function! RunTests(filename, single_test)
     let cmd = 'time ' . cmd
   end
   let cmd = ':!' . cmd . a:filename
+  if exists('g:color_tests') && g:color_tests != 0 && exists('color_argument')
+    let cmd = cmd . color_argument
+  endif
   if exists('t:single_test_argument') && a:single_test == 1
     let cmd = cmd . t:single_test_argument
   end
