@@ -13,7 +13,7 @@ export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
 
 # rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
+export RBENV_ROOT=/usr/local/rbenv
 eval "$(rbenv init -)"
 export active_ruby="$(rbenv version-name)"
 
@@ -36,3 +36,11 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+
+export NOVA_RAX_AUTH=1
+export OS_AUTH_URL=https://identity.api.rackspacecloud.com/v2.0/
+export NOVA_VERSION=2
+export NOVA_SERVICE_NAME=cloudServersOpenStack
+export OS_REGION_NAME=DFW
+
+source ~/.rackspace_auth
