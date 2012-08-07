@@ -51,9 +51,12 @@ map <leader>or :topleft 100 :split config/routes.rb<CR>
 map <leader>og :topleft 100 :split Gemfile\|set bufhidden=delete<CR>
 map <leader>ob :CtrlPBuffer<CR>
 map <leader>ou :CtrlPMRU<CR>
-map <leader>ot :CtrlPBufTag<CR>
+map <leader>o\ :CtrlPTag<CR>
+map <leader>o[ :CtrlPBufTag<CR>
+map <leader>o] :CtrlPBufTagAll<CR>
 map <leader>oo :CtrlP<CR>
 map <leader>o. :CtrlP %%<CR>
+map <leader>o  <nop>
 
 "" Vim-Rails mappings
 map <leader>. :A<CR>
