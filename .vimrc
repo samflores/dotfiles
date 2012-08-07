@@ -35,6 +35,7 @@ set hidden                      " I'm not sure I like this options, but giving i
 set splitbelow
 set splitright
 set viminfo='1000,f1,<500,:100,@10,@10
+set title
 
 "" Status Line
 set laststatus=2
@@ -84,6 +85,15 @@ autocmd! BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
+
+autocmd! BufEnter *
+      \ let &titlestring=expand("%:t")
+
+autocmd! InsertEnter *
+      \ let &titlestring=expand("%:t") . " - INSERT"
+
+autocmd! InsertLeave *
+      \ let &titlestring=expand("%:t")
 
 "" Remove trailing white spaces before saving
 autocmd! BufWritePre *
