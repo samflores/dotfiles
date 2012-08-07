@@ -5,7 +5,7 @@ let g:ctrlp_match_window_reversed = 0
 "" Disable CtrlP default mapping
 let g:ctrlp_map = ''
 "" Mark Eclipse projects as CtrlP root
-let g:ctrlp_root_markers = ['.project']
+let g:ctrlp_root_markers = ['.project', 'Gemfile']
 
 let g:ctrlp_status_func = {
 \ 'main': 'CtrlPMainStatusLine',
