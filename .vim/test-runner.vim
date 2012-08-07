@@ -52,10 +52,10 @@ function! RunTests(filename, single_test)
   if exists('g:time_tests') && g:time_tests != 0
     let cmd = 'time ' . cmd
   end
-  let cmd = ':!' . cmd . a:filename
   if exists('g:color_tests') && g:color_tests != 0 && exists('color_argument')
     let cmd = cmd . color_argument
   endif
+  let cmd = ':!' . cmd . a:filename
   if exists('t:single_test_argument') && a:single_test == 1
     let cmd = cmd . t:single_test_argument
   end
