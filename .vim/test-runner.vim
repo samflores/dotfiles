@@ -1,7 +1,7 @@
 function! RunTestFile(...)
   let in_test_file = match(expand("%"), '\(\.feature\|_mspec\.rb\|_spec\.rb\)$') != -1
   if in_test_file
-    call SetTestFile()
+    let t:saved_test_file=@%
     if a:0
       call SetSingleTestArg()
     endif
@@ -9,10 +9,6 @@ function! RunTestFile(...)
     return
   endif
   call RunTests(t:saved_test_file, a:0 ? 1 : 0)
-endfunction
-
-function! SetTestFile()
-  let t:saved_test_file=@%
 endfunction
 
 function! SetSingleTestArg()
