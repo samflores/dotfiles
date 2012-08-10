@@ -2,11 +2,8 @@ let mapleader=","
 set nocompatible                " Vim > Vi
 filetype off
 
-"" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-source ~/.vim/Vimfile
+"" Vim Addon Manager
+so ~/.vim/vam-config.vim
 
 "" General
 filetype plugin indent on
