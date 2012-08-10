@@ -18,7 +18,7 @@ function! SetSingleTestArg()
   if match(t:saved_test_file, '_mspec.rb$') != -1
     let itline = search("^\\s\\{0,}it", 'bncW')
     let linematch = matchlist(getline(itline), '\(["' . "'" . ']\)\(.\+\)\1')
-    let t:single_test_argument=" --name \"/" . get(linematch, 2) . "/\""
+    let t:single_test_argument=" --name \"/" . get(linematch, 2) . "$/\""
   elseif match(t:saved_test_file, '.feature$') != -1
     let scline = search("^\\s\\{0,}Scenario:", 'bncW')
     let t:single_test_argument=":".scline
@@ -34,7 +34,7 @@ function! RunTests(filename, single_test)
     let cmd = 'ruby -I. -S cucumber --no-color '
     let color_argument = ' --color '
   elseif match(a:filename, '_mspec.rb$') != -1
-    let cmd = 'ruby -I. '
+    let cmd = 'turn -I. '
     let color_argument = ' -r minitest/pride '
   elseif match(a:filename, '_spec.rb$') != -1
     let cmd = 'rspec '
