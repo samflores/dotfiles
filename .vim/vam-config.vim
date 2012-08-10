@@ -37,8 +37,8 @@ fun! ReadAddonsList(file)
     endif
   endfor
   au FileType *
-        \ for l in values(filter(copy(g:filetype_addons), string(expand('<amatch>')).' =~ v:key')) |
-        \   call vam#ActivateAddons(l, {'force_loading_plugins_now':1}) |
+        \ for addons_for_type in values(filter(copy(g:filetype_addons), string(expand('<amatch>')).' =~ v:key')) |
+        \   call vam#ActivateAddons(addons_for_type, {'force_loading_plugins_now':1}) |
         \ endfor
   call vam#ActivateAddons(common_addons, {'auto_install' : 0})
 endf
