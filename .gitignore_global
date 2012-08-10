@@ -27,6 +27,11 @@
 *.sqlite
 *.db
 
+# Test coverage and tags #
+######################
+coverage
+tags
+
 # OS generated files #
 ######################
 .DS_Store*
