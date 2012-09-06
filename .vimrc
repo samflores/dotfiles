@@ -11,7 +11,7 @@ let &winheight=&lines*2/3
 let &winwidth=&columns*2/3
 set undofile
 set undodir=~/.vim/undos
-set spell spelllang=en_us       " activate spell checking
+set spelllang=en_us             " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
 set number                      " show line number
@@ -26,7 +26,9 @@ set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=.project,*.lock
-set wildignore+=*.class,tags
+set wildignore+=*.class,*.jar,tags
+set wildignore+=coverage
+set wildignore+=*.min.js,*.min.css
 set wildignore+=.*
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
@@ -59,6 +61,26 @@ let g:dbext_default_history_file = '.dbext_history'
 
 "" Add an space after comment chars
 let NERDSpaceDelims=1
+
+"" Clojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let vimclojure#WantNailgun = 1
+let vimclojure#FuzzyIndent = 1
+
+"" ZenCoding
+let g:user_zen_expandabbr_key = ',zz'
+let g:user_zen_expandword_key = ',zw'
+let g:user_zen_balancetaginward_key = ',zi'
+let g:user_zen_balancetagoutward_key = ',zo'
+let g:user_zen_next_key = ']t'
+let g:user_zen_prev_key = '[t'
+let g:user_zen_imagesize_key = ',zp'
+let g:user_zen_togglecomment_key = ',z/'
+let g:user_zen_splitjointag_key = ',zj'
+let g:user_zen_removetag_key = ',zk'
+let g:user_zen_anchorizeurl_key = ',za'
+let g:user_zen_anchorizesummary_key = ',zA'
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight

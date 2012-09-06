@@ -17,6 +17,7 @@ Syntastic
 TwitVim
 Gist
 WebAPI
+VimClojure
 mustache
 
 Textile_for_VIM                     => ^textile$
