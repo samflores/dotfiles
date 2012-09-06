@@ -104,9 +104,13 @@ nnoremap 0 ^
 nnoremap 00 0
 nnoremap <silent> <leader>C :noh<CR>
 
-nnoremap <silent> <leader>B :let bg = (&background == "light" ? "dark" : "light") \| echom bg \| exec "set background=" . bg . " \| echom &background \| let $TERMBG=bg \| !cp ~/.config/Terminal/terminalrc." . bg . " ~/.config/Terminal/terminalrc"<cr><cr>
 
 "" Run Ruby tests
 map <silent> <leader>r :call RunTestFile()<cr>
 map <silent> <leader>R :call RunTestFile(1)<cr>
 map <silent> <leader>a :call RunTests('')<cr>
+
+"" Syntax highlight details
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
