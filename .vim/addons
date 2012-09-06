@@ -16,6 +16,7 @@ AutoTag
 Syntastic
 TwitVim
 Gist
+WebAPI
 mustache
 
 Textile_for_VIM                     => ^textile$

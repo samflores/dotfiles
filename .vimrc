@@ -57,10 +57,6 @@ let g:is_mzscheme = 1
 "" DBExt
 let g:dbext_default_history_file = '.dbext_history'
 
-"" ConqueTerm
-let g:ConqueTerm_InsertOnEnter = 1
-let g:ConqueTerm_CloseOnEnd = 1
-
 "" Add an space after comment chars
 let NERDSpaceDelims=1
 
