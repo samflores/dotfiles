@@ -67,8 +67,7 @@ let NERDSpaceDelims=1
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
-colorscheme solarized
-nnoremap <silent> <leader>S :let &background = (&background == 'dark' ? 'light' : 'dark')<cr>
+colorscheme hybrid
 
 "" Set winheight and winwidth after terminal resize
 autocmd! VimResized *
