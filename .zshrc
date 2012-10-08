@@ -14,6 +14,5 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"    beginning-of-line
-[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
-
+bindkey $terminfo[khome] vi-beginning-of-line
+bindkey $terminfo[kend] vi-end-of-line
