@@ -19,6 +19,7 @@ Gist
 WebAPI
 VimClojure
 mustache
+eclim
 
 Textile_for_VIM                     => ^textile$
 dbext                               => ^\%(sql\|ruby\)$
