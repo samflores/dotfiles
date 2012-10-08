@@ -34,7 +34,7 @@
 [merge]
   tool             = vimdiff
 [core]
-  excludesfile     = $HOME/.gitignore_global
+  excludesfile     = ~/.gitignore_global
 [branch "master"]
   remote           = origin
   merge            = refs/head/master
