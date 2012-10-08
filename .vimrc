@@ -2,6 +2,8 @@ let mapleader=","
 set nocompatible                " Vim > Vi
 filetype off
 
+let g:EclimBaseDir="~/.vim/vim-addons/eclim"
+set rtp+="~/.vim/vim-addons/eclim"
 "" Vim Addon Manager
 so ~/.vim/vam-config.vim
 
@@ -11,7 +13,8 @@ let &winheight=&lines*2/3
 let &winwidth=&columns*2/3
 set undofile
 set undodir=~/.vim/undos
-set spelllang=en_us             " activate spell checking
+set directory+=,$HOME/.vim/temp,$TMP
+set spelllang=en_us,pt_br       " activate spell checking
 set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
 set number                      " show line number
@@ -88,6 +91,7 @@ let g:EasyMotion_leader_key = '\'
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
+set t_Co=256
 colorscheme hybrid
 
 "" Set winheight and winwidth after terminal resize
