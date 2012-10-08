@@ -82,6 +82,9 @@ let g:user_zen_removetag_key = ',zk'
 let g:user_zen_anchorizeurl_key = ',za'
 let g:user_zen_anchorizesummary_key = ',zA'
 
+"" EasyMotion
+let g:EasyMotion_leader_key = '\'
+
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
