@@ -1,0 +1,10 @@
+--regex-ruby=/^[ \t]*(get|post|put|delete|head)[ \t\(]*['"](.*)['"][ \t\)]*/\1 \2/s,route/
+
+--regex-ruby=/^[ \t]*property[ \t]+:([a-zA-Z0-9_]+)/\1/a,property/
+--regex-ruby=/^[ \t]*has[ \t]+1,[ \t]+:([a-zA-Z0-9_]+)/\2/a,to 1 association/
+--regex-ruby=/^[ \t]*has[ \t]+n,[ \t]+:([a-zA-Z0-9_]+)/\2/a,to n association/
+--regex-ruby=/^[ \t]*belongs_to[ \t]+:([a-zA-Z0-9_]+)/\1/a,belongs to association/
+
+--regex-ruby=/^[ \t]*let[ \t\(]*:([^) ]+)[ \t\)]*/\1/s,let/
+--regex-ruby=/^[ \t]*it[ \t\(]*['"](.*)['"][ \t\)]*/\1/s,spec/
+--regex-ruby=/^[ \t]*describe[ \t\(]*['"](.*)['"][ \t\)]*/\1/s,spec group/
