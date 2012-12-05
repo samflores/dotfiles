@@ -13,7 +13,7 @@
 --langmap=clojure:.clj
 --regex-clojure=/^\(def[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,definition/
 --regex-clojure=/^\(defn[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,function definition/
---regex-clojure=/^\(defn\-?[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,private function definition/
+--regex-clojure=/^\(defn\-[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,private function definition/
 --regex-clojure=/^\(defmacro[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,macro definition/
 --regex-clojure=/^\(deftype[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,type definition/
 --regex-clojure=/^\(defrecord[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,record definition/
