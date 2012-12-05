@@ -1,6 +1,6 @@
 ZSH=$HOME/.omz
 
-ZSH_THEME="kong"
+ZSH_THEME="kardan"
 
 CASE_SENSITIVE="true"
 
