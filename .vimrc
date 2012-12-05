@@ -27,6 +27,7 @@ set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
+set wildignore+=*node_modules/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=.project,*.lock
 set wildignore+=*.class,*.jar,tags
