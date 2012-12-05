@@ -8,3 +8,13 @@
 --regex-ruby=/^[ \t]*let[ \t\(]*:([^) ]+)[ \t\)]*/\1/s,let/
 --regex-ruby=/^[ \t]*it[ \t\(]*['"](.*)['"][ \t\)]*/\1/s,spec/
 --regex-ruby=/^[ \t]*describe[ \t\(]*['"](.*)['"][ \t\)]*/\1/s,spec group/
+
+--langdef=clojure
+--langmap=clojure:.clj
+--regex-clojure=/^\(def[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,definition/
+--regex-clojure=/^\(defn\-?[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,function definition/
+--regex-clojure=/^\(defmacro[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,macro definition/
+--regex-clojure=/^\(deftype[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,type definition/
+--regex-clojure=/^\(defrecord[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,record definition/
+--regex-clojure=/^\(definterface[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,interface definition/
+--regex-clojure=/^\(defroutes[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,routes definition/
