@@ -82,7 +82,6 @@ let NERDSpaceDelims=1
 "" Clojure
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
-let vimclojure#WantNailgun = 1
 let vimclojure#FuzzyIndent = 1
 
 "" ZenCoding
