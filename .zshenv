@@ -12,10 +12,10 @@ export SPEC_OPTS='-c'
 export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
 
-# rbenv
-export RBENV_ROOT=/usr/local/rbenv
-eval "$(rbenv init -)"
-export active_ruby="$(rbenv version-name)"
+# chruby
+. /usr/local/Cellar/chruby/0.2.3/share/chruby/chruby.sh
+
+RUBIES=(/usr/local/rubies/*)
 
 unsetopt auto_name_dirs
 
