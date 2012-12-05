@@ -52,7 +52,7 @@ call DefineCtrlPMapping('oJ', 'public/javascripts', 'public/js', 'resources/publ
 call DefineCtrlPMapping('oF', 'features', 'spec/acceptance', 'spec/features')
 call DefineCtrlPMapping('oe', 'app/cells')
 call DefineCtrlPMapping('oE', 'spec/cells')
-call DefineCtrlPMapping('od', 'app/decorators', 'app/stylists')
+call DefineCtrlPMapping('od', 'app/decorators', 'app/stylists', 'app/presenters')
 call DefineCtrlPMapping('oD', 'spec/decorators', 'spec/stylists')
 map <leader>or :topleft 100 :split config/routes.rb<CR>
 map <leader>og :topleft 100 :split Gemfile\|set bufhidden=delete<CR>
