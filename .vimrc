@@ -37,7 +37,7 @@ set wildignore+=.*
 set hidden                      " I'm not sure I like this options, but giving it a try
 set splitbelow
 set splitright
-set viminfo='1000,f1,<500,:100,@10,@10
+set viminfo=!,'1000,f1,<500,:100,@10
 set title
 
 "" Status Line
