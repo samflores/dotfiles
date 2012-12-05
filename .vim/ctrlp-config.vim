@@ -8,9 +8,11 @@ let g:ctrlp_map = ''
 let g:ctrlp_root_markers = ['.project', 'Gemfile', 'project.clj']
 
 let g:ctrlp_status_func = {
-\ 'main': 'CtrlPMainStatusLine',
-\ 'prog': 'CtrlPProgStatusLine',
-\ }
+      \   'main': 'CtrlPMainStatusLine',
+      \   'prog': 'CtrlPProgStatusLine',
+      \ }
+
+let g:ctrlp_buftag_types = { 'clojure': '--language-force=clojure' }
 
 function! CtrlPMainStatusLine(...)
   let item = '%#Character# '.a:5.' %*'
