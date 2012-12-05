@@ -19,9 +19,12 @@ Gist
 WebAPI
 VimClojure
 mustache
-eclim
 matchit.zip
+markdown@tpope
+eunuch
+github:tpope/vim-foreplay
 
+github:miripiruni/CSScomb-for-Vim   => ^css$
 Textile_for_VIM                     => ^textile$
 dbext                               => ^\%(sql\|ruby\)$
 rails                               => ^\%(sql\|ruby\)$
@@ -29,6 +32,6 @@ vim-ruby                            => ^\%(eruby\|ruby\)$
 blockle                             => ^\%(eruby\|ruby\)$
 Better_Javascript_Indentation       => ^\%(html\|javascript\)$
 html5                               => ^\%(mustache\|html\|eruby\)$
-ZenCoding                           => ^\%(mustache\|html\|css\)$
+ZenCoding                           => ^\%(mustache\|html\|css|sass|scss\)$
 github:hail2u/vim-css3-syntax.git   => ^\%(css\|html\)$
 github:sunaku/vim-ruby-minitest.git => ^\%(eruby\|ruby\)$
