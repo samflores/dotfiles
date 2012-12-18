@@ -59,7 +59,7 @@ set ignorecase                  " case insensitive search ...
 set smartcase                   " ... unless we have a capital letter
 
 "" Folding
-set fillchars=fold:\ ,vert:\│
+set fillchars=fold:\ ,vert:\⎸
 set foldtext=MyFoldFunction()
 set nofoldenable
 set foldlevel=4
