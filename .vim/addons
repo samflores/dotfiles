@@ -30,8 +30,8 @@ dbext                               => ^\%(sql\|ruby\)$
 rails                               => ^\%(sql\|ruby\)$
 vim-ruby                            => ^\%(eruby\|ruby\)$
 blockle                             => ^\%(eruby\|ruby\)$
-JavaScript_Indent
+JavaScript_Indent                   => ^\%(mustache\|html\|eruby\|js\)$
 html5                               => ^\%(mustache\|html\|eruby\)$
 ZenCoding                           => ^\%(mustache\|html\|css\|sass\|scss\)$
-Better_CSS_Syntax_for_Vim
+Better_CSS_Syntax_for_Vim           => ^\%(mustache\|html\|css\|sass\|scss\)$
 github:sunaku/vim-ruby-minitest.git => ^\%(eruby\|ruby\)$
