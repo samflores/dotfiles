@@ -13,9 +13,10 @@ export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
 
 # chruby
-. /usr/local/Cellar/chruby/0.2.3/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/chruby.sh
 
-RUBIES=(/usr/local/rubies/*)
+RUBIES=(/opt/rubies/*)
+chruby mri
 
 unsetopt auto_name_dirs
 
