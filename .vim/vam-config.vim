@@ -19,6 +19,19 @@ fun! EnsureVamIsOnDisk(vam_install_path)
   endif
 endf
 
+fun! Flatten(list)
+  let val = []
+  for elem in a:list
+    if type(elem) == type([])
+      call extend(val, Flatten(elem))
+    else
+      call add(val, elem)
+    endif
+    unlet elem
+  endfor
+  return val
+endfun
+
 fun! ReadAddonsList(file)
   let all_addons = readfile(expand(a:file))
   let g:filetype_addons = {}
@@ -37,10 +50,9 @@ fun! ReadAddonsList(file)
     endif
   endfor
   au FileType *
-        \ for addons_for_type in values(filter(copy(g:filetype_addons), string(expand('<amatch>')).' =~ v:key')) |
-        \   call vam#ActivateAddons(addons_for_type, {'force_loading_plugins_now':1}) |
-        \ endfor
-  call vam#ActivateAddons(common_addons, {'auto_install' : 0})
+        \ let plugins_to_load = Flatten(values(filter(copy(g:filetype_addons), string(expand('<amatch>')).' =~ v:key'))) |
+        \ call vam#ActivateAddons(plugins_to_load, {'auto_install' : 1, 'force_loading_plugins_now':1})
+  call vam#ActivateAddons(common_addons, {'auto_install' : 1})
 endf
 
 fun! SetupVAM()
@@ -53,7 +65,7 @@ fun! SetupVAM()
   endif
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
-  call vam#ActivateAddons([], {'auto_install' : 0})
+  call vam#ActivateAddons([], {'auto_install' : 1})
 endfun
 
 call SetupVAM()
