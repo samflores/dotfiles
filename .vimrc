@@ -63,7 +63,7 @@ set fillchars=fold:\ ,vert:\⎸
 set foldtext=MyFoldFunction()
 set nofoldenable
 set foldlevel=4
-set foldmethod=syntax
+set foldmethod=manual
 
 function! MyFoldFunction()
   let line = getline(v:foldstart)
