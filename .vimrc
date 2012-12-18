@@ -25,9 +25,11 @@ set clipboard=unnamed           " yank to clipboard
 set timeoutlen=500              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
+set cursorline                  " highlight current line
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/**,public/sprockets/**
 set wildignore+=*node_modules/**
+set wildignore+=*resources/public/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=.project,*.lock
 set wildignore+=*.class,*.jar,tags
@@ -50,6 +52,7 @@ set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " indent by 2 spaces
 set expandtab                   " use spaces instead tabs
 set backspace=indent,eol,start  " backspace can delete anything
+set smartindent
 set listchars=tab:▸\ ,eol:¬,nbsp:-,trail:-
 
 "" Searching
@@ -101,6 +104,9 @@ let g:user_zen_anchorizesummary_key = ',zA'
 
 "" EasyMotion
 let g:EasyMotion_leader_key = '\'
+
+"" SuperTab
+let g:SuperTabLongestHighlight = 1
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
