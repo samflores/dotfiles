@@ -1,5 +1,5 @@
-snipmate-snippets
-The_NERD_Commenter
+github:MarcWeber/ultisnips
+commentary
 ctrlp
 SuperTab%1643
 surround
@@ -7,7 +7,7 @@ EasyMotion
 fugitive
 ack
 hybrid
-delimitMate
+paredit
 Tabular
 unimpaired
 abolish
@@ -17,21 +17,21 @@ Syntastic
 TwitVim
 Gist
 WebAPI
-VimClojure
+github:guns/vim-clojure-static
 mustache
 matchit.zip
 markdown@tpope
 eunuch
 github:tpope/vim-foreplay
 
-github:miripiruni/CSScomb-for-Vim   => ^css$
+csscomb-vim                         => ^css$
 Textile_for_VIM                     => ^textile$
 dbext                               => ^\%(sql\|ruby\)$
 rails                               => ^\%(sql\|ruby\)$
 vim-ruby                            => ^\%(eruby\|ruby\)$
 blockle                             => ^\%(eruby\|ruby\)$
-Better_Javascript_Indentation       => ^\%(html\|javascript\)$
+JavaScript_Indent
 html5                               => ^\%(mustache\|html\|eruby\)$
-ZenCoding                           => ^\%(mustache\|html\|css|sass|scss\)$
-github:hail2u/vim-css3-syntax.git   => ^\%(css\|html\)$
+ZenCoding                           => ^\%(mustache\|html\|css\|sass\|scss\)$
+Better_CSS_Syntax_for_Vim
 github:sunaku/vim-ruby-minitest.git => ^\%(eruby\|ruby\)$
