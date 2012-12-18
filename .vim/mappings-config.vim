@@ -61,6 +61,9 @@ map <leader>ou :CtrlPMRU<CR>
 map <leader>o\ :CtrlPTag<CR>
 map <leader>o[ :CtrlPBufTag<CR>
 map <leader>o] :CtrlPBufTagAll<CR>
+map <leader>o' :CtrlPChange<CR>
+map <leader>o" :CtrlPChangeAll<CR>
+map <leader>o; :CtrlPUndo<CR>
 map <leader>oo :CtrlP<CR>
 map <leader>o. :CtrlP %%<CR>
 map <leader>o  <nop>
