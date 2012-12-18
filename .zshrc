@@ -12,7 +12,7 @@ plugins=(vi-mode git brew gem bundle tmux zsh-syntax-highlighting lein osx)
 
 source $ZSH/oh-my-zsh.sh
 
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+bindkey "^[OA" history-search-backward
+bindkey "^[OB" history-search-forward
 bindkey $terminfo[khome] vi-beginning-of-line
 bindkey $terminfo[kend] vi-end-of-line
