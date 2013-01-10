@@ -4,6 +4,8 @@
 !.vimrc
 !.zshrc
 !.zshenv
+!.zlogin
+!.zpreztorc
 !.gitconfig
 !.gitignore_global
 !.vim
