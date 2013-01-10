@@ -1,16 +1,9 @@
-ZSH=$HOME/.omz
+# source $ZSH/oh-my-zsh.sh
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-ZSH_THEME="kardan"
-
-CASE_SENSITIVE="true"
-
-DISABLE_AUTO_UPDATE="true"
-
-COMPLETION_WAITING_DOTS="true"
-
-plugins=(vi-mode git github brew gem bundle tmux zsh-syntax-highlighting lein osx)
-
-source $ZSH/oh-my-zsh.sh
+# set default ruby interpreter using chruby
+RUBIES=(/opt/rubies/*)
+chruby mri
 
 bindkey "^[OA" history-search-backward
 bindkey "^[OB" history-search-forward

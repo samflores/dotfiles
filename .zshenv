@@ -2,6 +2,9 @@
 export ARCHFLAGS='-arch x86_64'
 
 # General
+export BROWSER='open'
+eval "$(locale)"
+
 export PROJECTS_HOME=/Code
 
 # Homebrew
@@ -11,12 +14,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export SPEC_OPTS='-c'
 export RUBYOPT=-Ku
 export RBXOPT="-Xrbc.db=$HOME/.rbc -X19"
-
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-
-RUBIES=(/opt/rubies/*)
-chruby mri
 
 unsetopt auto_name_dirs
 
