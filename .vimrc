@@ -108,6 +108,9 @@ let g:EasyMotion_leader_key = '\'
 "" SuperTab
 let g:SuperTabLongestHighlight = 1
 
+"" use Silver Searcher with ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 "" html5 indent
 let g:html_indent_tags="section\|article\|header\|footer\|nav\|li\|p\|a"
 
