@@ -12,7 +12,12 @@ let g:ctrlp_status_func = {
       \   'prog': 'CtrlPProgStatusLine',
       \ }
 
-let g:ctrlp_buftag_types = { 'clojure': '--language-force=clojure' }
+let g:ctrlp_buftag_types = {
+      \   'javascript': '--language-force=JavaScript',
+      \   'clojure': '--language-force=clojure',
+      \   'css': '--language-force=css',
+      \   'scss': '--language-force=css'
+      \ }
 
 function! CtrlPMainStatusLine(...)
   let item = '%#Character# '.a:5.' %*'
