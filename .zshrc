@@ -3,7 +3,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # set default ruby interpreter using chruby
 RUBIES=(/opt/rubies/*)
-chruby mri
+chruby 1.9.3
 
 bindkey "^[OA" history-search-backward
 bindkey "^[OB" history-search-forward
