@@ -112,7 +112,7 @@ let g:SuperTabLongestHighlight = 1
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
 set t_Co=256
-colorscheme hybrid
+colorscheme vimbrant
 
 "" Set winheight and winwidth after terminal resize
 autocmd! VimResized *
