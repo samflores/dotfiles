@@ -108,6 +108,9 @@ let g:EasyMotion_leader_key = '\'
 "" SuperTab
 let g:SuperTabLongestHighlight = 1
 
+"" html5 indent
+let g:html_indent_tags="section\|article\|header\|footer\|nav\|li\|p\|a"
+
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark             " defaults to dark bg
