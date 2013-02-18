@@ -20,11 +20,8 @@
 --regex-clojure=/^\(definterface[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,interface definition/
 --regex-clojure=/^\(defroutes[ \t]+(\^\{.*\})?[ \t]*([^ \t]+).*/\2/d,routes definition/
 
---langdef=javascript
---langmap=javascript:.js
---regex-javascript=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\{/\1/,object/
---regex-javascript=/([A-Za-z0-9._$()]+)[ \t]*[:=][ \t]*function[ \t]*\(/\1/,function/
---regex-javascript=/function[ \t]+([A-Za-z0-9._$]+)[ \t]*\(([^)])*\)/\1/,function/
---regex-javascript=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\[/\1/,array/
---regex-javascript=/([^= ]+)[ \t]*=[ \t]*[^"]'[^']*/\1/,string/
---regex-javascript=/([^= ]+)[ \t]*=[ \t]*[^']"[^"]*/\1/,string/
+--langdef=css
+--langmap=css:.css
+--regex-css=/^[ \t]*([^\t {][^{]{1,100})(\t| )*{/\1/d,definition/
+--regex-css=/^[ \t]*@(\w+)[ \t]+['"]([^"']+)['"][ \t]*;/\2/d,import/
+--regex-css=/^[ \t]*(\$[^:]+)[ \t]*:[ \t]*.+;/\1/d,variable/
