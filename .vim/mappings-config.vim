@@ -104,7 +104,7 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 
 nnoremap 0 ^
-nnoremap 00 0
+nnoremap <leader>0 0
 nnoremap <silent> <leader>C :noh<CR>
 
 
