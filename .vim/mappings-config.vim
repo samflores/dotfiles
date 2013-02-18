@@ -73,10 +73,10 @@ map <leader>. :A<CR>
 map <leader>/ :R<CR>
 
 "" Fugitive mappings
-map <leader>gst :Gstatus<CR>
-map <leader>ga  :Gwrite<CR>
+map <leader>gws :Gstatus<CR>
+map <leader>gia :Gwrite<CR>
 map <leader>gco :Gread<CR>
-map <leader>gd  :Gdiff<CR>
+map <leader>gwd :Gdiff<CR>
 map <leader>gc  :Gcommit<CR>
 map <leader>gca :Gcommit --amend<CR>
 map <leader>gra :Git ra<CR>
