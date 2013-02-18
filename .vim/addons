@@ -24,7 +24,7 @@ markdown@tpope
 eunuch
 github:tpope/vim-foreplay
 
-csscomb-vim                         => ^css$
+github:miripiruni/CSScomb-for-Vim   => ^s\?css$
 Textile_for_VIM                     => ^textile$
 dbext                               => ^\%(sql\|ruby\)$
 rails                               => ^\%(sql\|ruby\)$
