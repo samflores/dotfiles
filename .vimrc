@@ -108,6 +108,14 @@ let g:EasyMotion_leader_key = '\'
 "" SuperTab
 let g:SuperTabLongestHighlight = 1
 
+"" XpTemplate + SuperTab
+"" avoid key conflict
+let g:SuperTabMappingForward = '<Plug>supertabKey'
+"" if nothing matched in xpt, try supertab
+let g:xptemplate_fallback = '<Plug>supertabKey'
+"" xpt uses <tab> as trigger key
+let g:xptemplate_key = '<Tab>'
+
 "" use Silver Searcher with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
