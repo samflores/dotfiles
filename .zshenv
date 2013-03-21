@@ -28,4 +28,4 @@ alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.
 alias pcat='pygmentize'
 alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.2.3-x86_64/mongod.conf'
 
-source ~/.projects
+[[ -a ~/.projects ]] && source ~/.projects
