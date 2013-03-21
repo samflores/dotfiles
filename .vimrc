@@ -124,9 +124,9 @@ let g:html_indent_tags="section\|article\|header\|footer\|nav\|li\|p\|a"
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
-set background=dark             " defaults to dark bg
-set t_Co=256
-colorscheme vimbrant
+let bg=substitute(system("~/bin/terminal_theme"), "\\n", "", "")
+let &background=bg
+colorscheme solarized
 
 "" Set winheight and winwidth after terminal resize
 autocmd! VimResized *
