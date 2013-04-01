@@ -25,7 +25,8 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'ruby' \
   'osx' \
-  'git'
+  'git' \
+  'tmux'
 
 #
 # Editor
@@ -109,12 +110,13 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 
 # Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
+# zstyle ':prezto:module:terminal' auto-title 'yes'
 
 #
 # Tmux
 #
 
 # Auto start a session when Zsh is launched.
-# zstyle ':prezto:module:tmux' auto-start 'yes'
+zstyle ':prezto:module:tmux' session-names 'work' 'home'
+zstyle ':prezto:module:tmux' auto-start 'yes'
 
