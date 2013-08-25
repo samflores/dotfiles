@@ -48,3 +48,12 @@ Thumbs.db
 *.swp
 *.swo
 *.dbext_history
+.project
+.classpath
+.settings
+.factorypath
+target
+bin
+.metadata
+*UploaderTest*
+*.backup.properties
