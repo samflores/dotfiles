@@ -2,8 +2,8 @@ let mapleader=","
 set nocompatible                " Vim > Vi
 filetype off
 
-let g:EclimBaseDir="~/.vim/vim-addons/eclim"
-set rtp+="~/.vim/vim-addons/eclim"
+" let g:EclimBaseDir="~/.vim/vim-addons/eclim"
+" set rtp+="~/.vim/vim-addons/eclim"
 "" Vim Addon Manager
 so ~/.vim/vam-config.vim
 
@@ -22,12 +22,12 @@ set wildmenu                    " cycle on tab completion
 set completeopt=longest,menuone
 set shortmess=atI               " short messages
 set clipboard=unnamed           " yank to clipboard
-set timeoutlen=500              " don't wait too much
+set timeoutlen=300              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
-set cursorline                  " highlight current line
+" set cursorline                  " highlight current line
 set wildignore+=*.o,*.obj,.git,tmp/**
-set wildignore+=public/assets/**,public/sprockets/**
+set wildignore+=public/assets/*,public/sprockets/**
 set wildignore+=*node_modules/**
 set wildignore+=*resources/public/**
 set wildignore+=*.png,*.jpg,*.gif
@@ -44,7 +44,7 @@ set title
 
 "" Status Line
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
 
 "" Whitespace & Indentation
 set autoindent                  " do I need to say what does that mean?
@@ -53,7 +53,8 @@ set tabstop=2 shiftwidth=2      " indent by 2 spaces
 set expandtab                   " use spaces instead tabs
 set backspace=indent,eol,start  " backspace can delete anything
 set smartindent
-set listchars=tab:▸\ ,eol:¬,nbsp:-,trail:-
+set listchars=tab:▸\ ,eol:¬,nbsp:+,trail:-,extends:>,precedes:<
+set scrolloff=1
 
 "" Searching
 set hlsearch                    " highlight search
@@ -119,14 +120,25 @@ let g:xptemplate_key = '<Tab>'
 "" use Silver Searcher with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-"" html5 indent
-let g:html_indent_tags="section\|article\|header\|footer\|nav\|li\|p\|a"
+"" Powerline
+let g:Powerline_symbols = 'fancy'
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 let bg=substitute(system("~/bin/terminal_theme"), "\\n", "", "")
 let &background=bg
-colorscheme solarized
+set background=dark
+" let g:solarized_termcolors=16
+" let g:solarized_contrast="low"
+let t_Co=256
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+colorscheme vimbrant
+set guifont=Source_Code_Pro_Light:h16
+set guioptions=c
+
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 "" Set winheight and winwidth after terminal resize
 autocmd! VimResized *
@@ -134,6 +146,7 @@ autocmd! VimResized *
       \ let &winwidth=&columns*2/3 |
       \ wincmd l | wincmd h |
       \ wincmd j | wincmd k
+
 
 "" Jump to the last known cursor position on opening
 autocmd! BufReadPost *

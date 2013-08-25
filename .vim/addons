@@ -19,11 +19,18 @@ mustache
 matchit.zip
 markdown@tpope
 eunuch
+endwise
+vim-coffee-script
+html5
+Handlebars
+CSApprox
+midnight
+
 github:guns/vim-clojure-static
 github:airblade/vim-gitgutter
-endwise
-Solarized
-
+github:flazz/vim-colorschemes
+github:tpope/vim-dispatch
+github:tpope/vim-scriptease         => ^$vim$
 github:tpope/vim-fireplace          => ^$clojure$
 github:tpope/vim-classpath          => ^$clojure$
 github:miripiruni/CSScomb-for-Vim   => ^s\?css$
@@ -31,8 +38,7 @@ Textile_for_VIM                     => ^textile$
 dbext                               => ^\%(sql\|ruby\)$
 rails                               => ^\%(sql\|ruby\)$
 blockle                             => ^\%(eruby\|ruby\)$
-JavaScript_Indent                   => ^\%(mustache\|html\|eruby\|javascript\)$
-html5                               => ^\%(mustache\|html\|eruby\)$
+Better_Javascript_Indentation       => ^\%(mustache\|html\|eruby\|javascript\)$
 ZenCoding                           => ^\%(mustache\|html\|css\|sass\|scss\)$
 Better_CSS_Syntax_for_Vim           => ^\%(mustache\|html\|css\|sass\|scss\)$
 github:sunaku/vim-ruby-minitest.git => ^\%(eruby\|ruby\)$

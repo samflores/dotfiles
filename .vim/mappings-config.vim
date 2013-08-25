@@ -45,9 +45,9 @@ call DefineCtrlPMapping('oH', 'spec/helpers')
 call DefineCtrlPMapping('ol', 'app/libs', 'libs', 'app/lib', 'lib')
 call DefineCtrlPMapping('oL', 'spec/libs', 'spec/lib')
 call DefineCtrlPMapping('op', 'public', '.')
-call DefineCtrlPMapping('os', 'app/assets/stylesheets', 'views/stylesheets', 'app/assets/css', 'views/css')
+call DefineCtrlPMapping('os', 'assets/css', 'app/assets/stylesheets', 'views/stylesheets', 'app/assets/css', 'views/css')
 call DefineCtrlPMapping('oS', 'public/stylesheets', 'public/css', 'resources/public/css')
-call DefineCtrlPMapping('oj', 'app/assets/javascripts', 'views/javascripts', 'app/assets/js', 'views/js')
+call DefineCtrlPMapping('oj', 'assets/js', 'app/assets/javascripts', 'views/javascripts', 'app/assets/js', 'views/js')
 call DefineCtrlPMapping('oJ', 'public/javascripts', 'public/js', 'resources/public/js')
 call DefineCtrlPMapping('oF', 'features', 'spec/acceptance', 'spec/features')
 call DefineCtrlPMapping('oe', 'app/cells')
@@ -105,7 +105,7 @@ noremap <Right> <nop>
 
 nnoremap 0 ^
 nnoremap <leader>0 0
-nnoremap <silent> <leader>C :noh<CR>
+nnoremap <silent> <C-k> :noh<CR>
 
 
 "" Run Ruby tests
