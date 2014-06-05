@@ -2,10 +2,10 @@ let mapleader=","
 set nocompatible                " Vim > Vi
 filetype off
 
-" let g:EclimBaseDir="~/.vim/vim-addons/eclim"
-" set rtp+="~/.vim/vim-addons/eclim"
-"" Vim Addon Manager
-so ~/.vim/vam-config.vim
+so $HOME/.vim/config/bundle.vim
+
+let g:neocomplete#enable_at_startup = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 "" General
 filetype plugin indent on
@@ -25,7 +25,7 @@ set clipboard=unnamed           " yank to clipboard
 set timeoutlen=300              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
-" set cursorline                  " highlight current line
+set cursorline                  " highlight current line
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/*,public/sprockets/**
 set wildignore+=*node_modules/**
@@ -44,7 +44,7 @@ set title
 
 "" Status Line
 set laststatus=2
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{fugitive#statusline()}%y%=%-16(\ %l,%c%V\ %)%P
 
 "" Whitespace & Indentation
 set autoindent                  " do I need to say what does that mean?
@@ -62,132 +62,25 @@ set incsearch                   " incremental search
 set ignorecase                  " case insensitive search ...
 set smartcase                   " ... unless we have a capital letter
 
-"" Folding
-set fillchars=fold:\ ,vert:\⎸
-set foldtext=MyFoldFunction()
-set nofoldenable
-set foldlevel=4
-set foldmethod=manual
-
-function! MyFoldFunction()
-  let line = getline(v:foldstart)
-  let lastline = getline(v:foldend)
-  let numfolded = v:foldend - v:foldstart
-  return line . '  (+' . numfolded . ' lines)'
-endfunction
-
-let g:is_mzscheme = 1
-
-"" DBExt
-let g:dbext_default_history_file = '.dbext_history'
-
-"" Add an space after comment chars
-let NERDSpaceDelims=1
-
-"" Clojure
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-let vimclojure#FuzzyIndent = 1
-
-"" ZenCoding
-let g:user_zen_expandabbr_key = ',zz'
-let g:user_zen_expandword_key = ',zw'
-let g:user_zen_balancetaginward_key = ',zi'
-let g:user_zen_balancetagoutward_key = ',zo'
-let g:user_zen_next_key = ']t'
-let g:user_zen_prev_key = '[t'
-let g:user_zen_imagesize_key = ',zp'
-let g:user_zen_togglecomment_key = ',z/'
-let g:user_zen_splitjointag_key = ',zj'
-let g:user_zen_removetag_key = ',zk'
-let g:user_zen_anchorizeurl_key = ',za'
-let g:user_zen_anchorizesummary_key = ',zA'
-
-"" EasyMotion
-let g:EasyMotion_leader_key = '\'
-
-"" SuperTab
-let g:SuperTabLongestHighlight = 1
-
-"" XpTemplate + SuperTab
-"" avoid key conflict
-let g:SuperTabMappingForward = '<Plug>supertabKey'
-"" if nothing matched in xpt, try supertab
-let g:xptemplate_fallback = '<Plug>supertabKey'
-"" xpt uses <tab> as trigger key
-let g:xptemplate_key = '<Tab>'
-
-"" use Silver Searcher with ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-"" Powerline
-let g:Powerline_symbols = 'fancy'
+"" use Silver Searcher instead of Grep
+set grepprg=ag\ --nogroup\ --nocolor\ --column
 
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
-let bg=substitute(system("~/bin/terminal_theme"), "\\n", "", "")
-let &background=bg
 set background=dark
-" let g:solarized_termcolors=16
-" let g:solarized_contrast="low"
-let t_Co=256
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-colorscheme vimbrant
-set guifont=Source_Code_Pro_Light:h16
-set guioptions=c
+colorscheme ToyChest
 
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
-
-"" Set winheight and winwidth after terminal resize
-autocmd! VimResized *
-      \ let &winheight=&lines*2/3 |
-      \ let &winwidth=&columns*2/3 |
-      \ wincmd l | wincmd h |
-      \ wincmd j | wincmd k
-
-
-"" Jump to the last known cursor position on opening
-autocmd! BufReadPost *
-      \ if line("'\"") > 1 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-
-autocmd! BufEnter *
-      \ let &titlestring=expand("%:t")
-
-autocmd! InsertEnter *
-      \ let &titlestring=expand("%:t") . " - INSERT"
-
-autocmd! InsertLeave *
-      \ let &titlestring=expand("%:t")
-
-"" Remove trailing white spaces before saving
-autocmd! BufWritePre *
-      \ let _s=@/ |
-      \ let l = line(".") |
-      \ let c = col(".") |
-      \ %s/\s\+$//e |
-      \ let @/=_s |
-      \ call cursor(l, c)
-
-autocmd! BufWritePost ~/.vimrc source %
-autocmd! BufWritePost ~/.vim/*.vim source %
-
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=2\x7"
-
-"" Prevent buffer created by fugitive.vim from being hidden
-autocmd! BufReadPost fugitive://* set bufhidden=delete
+"" Change cursor between modes
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 "" I ALWAYS type 'W' instead 'w'
 command! W :w
 command! Wa :wa
 command! Ww :silent execute 'w !sudo tee %>/dev/null' | e!
 
-so ~/.vim/close-hidden.vim
-so ~/.vim/test-runner.vim
-so ~/.vim/colors-config.vim
-so ~/.vim/mappings-config.vim
-so ~/.vim/ctrlp-config.vim
+so $HOME/.vim/config/folding.vim
+so $HOME/.vim/config/autocommands.vim
+so $HOME/.vim/config/close-hidden.vim
+so $HOME/.vim/config/mappings.vim
+so $HOME/.vim/config/powerline.vim
