@@ -6,5 +6,5 @@ highlight MatchParen term=underline cterm=underline
 " highlight NonText ctermfg=bg
 
 " Display comments in italic
-" highlight Comment cterm=italic
+highlight Comment cterm=italic
 highlight clear SignColumn

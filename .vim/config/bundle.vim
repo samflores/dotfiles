@@ -11,8 +11,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'amdt/vim-niji'
@@ -20,6 +22,8 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'guns/vim-clojure-static'
 
 NeoBundle 'wting/rust.vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'pangloss/vim-javascript'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-eunuch'

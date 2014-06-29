@@ -4,9 +4,6 @@ filetype off
 
 so $HOME/.vim/config/bundle.vim
 
-let g:neocomplete#enable_at_startup = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
 "" General
 filetype plugin indent on
 let &winheight=&lines*2/3
@@ -80,6 +77,9 @@ command! Wa :wa
 command! Ww :silent execute 'w !sudo tee %>/dev/null' | e!
 
 so $HOME/.vim/config/folding.vim
+so $HOME/.vim/config/completion.vim
+so $HOME/.vim/config/unite.vim
+so $HOME/.vim/config/snippets.vim
 so $HOME/.vim/config/autocommands.vim
 so $HOME/.vim/config/close-hidden.vim
 so $HOME/.vim/config/mappings.vim
