@@ -26,8 +26,5 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export EDITOR="vi"
 
 alias irb='irb --simple-prompt'
-alias es-start='elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.90.0/config/elasticsearch.yml'
-alias pcat='pygmentize'
-alias mongodr='mongod run --config /usr/local/Cellar/mongodb/2.2.3-x86_64/mongod.conf'
 
 [[ -a ~/.projects ]] && source ~/.projects
