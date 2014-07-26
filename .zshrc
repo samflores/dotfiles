@@ -1,5 +1,5 @@
-# source $ZSH/oh-my-zsh.sh
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # set default ruby interpreter using chruby
 RUBIES=(~/.rubies/*)
