@@ -11,8 +11,5 @@
 !.vim
 !.vim/config
 !.vim/config/*.vim
-!.vim/test-runner.vim
-!.vim/close-hidden.vim
-!.vim/addons
 !.tmux.conf
 !.ctags
