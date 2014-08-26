@@ -16,13 +16,13 @@ set encoding=utf-8              " utf-8 FTW
 set showcmd                     " display incomplete commands
 set number                      " show line number
 set wildmenu                    " cycle on tab completion
-set completeopt=longest,menuone
+set wildmode=full
+set completeopt=longest,preview
 set shortmess=atI               " short messages
 set clipboard=unnamed           " yank to clipboard
 set timeoutlen=300              " don't wait too much
 set mouse=a                     " enable mouse support
 set nobackup                    " don't save backup files
-set cursorline                  " highlight current line
 set wildignore+=*.o,*.obj,.git,tmp/**
 set wildignore+=public/assets/*,public/sprockets/**
 set wildignore+=*node_modules/**
@@ -65,7 +65,7 @@ set grepprg=ag\ --nogroup\ --nocolor\ --column
 "" Syntax Highlight & Colors
 syntax on                       " active syntax highlight
 set background=dark
-colorscheme ToyChest
+colorscheme Solarized
 
 "" Change cursor between modes
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -76,11 +76,13 @@ command! W :w
 command! Wa :wa
 command! Ww :silent execute 'w !sudo tee %>/dev/null' | e!
 
+so $HOME/.vim/config/colors.vim
 so $HOME/.vim/config/folding.vim
 so $HOME/.vim/config/completion.vim
 so $HOME/.vim/config/unite.vim
 so $HOME/.vim/config/snippets.vim
-so $HOME/.vim/config/autocommands.vim
 so $HOME/.vim/config/close-hidden.vim
-so $HOME/.vim/config/mappings.vim
 so $HOME/.vim/config/powerline.vim
+so $HOME/.vim/config/test-runner.vim
+so $HOME/.vim/config/mappings.vim
+so $HOME/.vim/config/autocommands.vim
