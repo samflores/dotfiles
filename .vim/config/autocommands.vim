@@ -11,14 +11,17 @@ autocmd! BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
-autocmd! BufEnter *
-      \ let &titlestring=expand("%:t")
+function! AutoSave()
+  let blacklist = ['unite', 'qf']
+  if index(blacklist, &ft) < 0
+    write
+  endif
+endfunction
 
-autocmd! InsertEnter *
-      \ let &titlestring=expand("%:t") . " - INSERT"
-
-autocmd! InsertLeave *
-      \ let &titlestring=expand("%:t")
+"" Update window title according to buffer
+autocmd! BufEnter *    let &titlestring=expand("%:t")
+autocmd! InsertEnter * let &titlestring=expand("%:t") . " - INSERT"
+autocmd! InsertLeave * let &titlestring=expand("%:t") | call AutoSave()
 
 "" Remove trailing white spaces before saving
 autocmd! BufWritePre *
