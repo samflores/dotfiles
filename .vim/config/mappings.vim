@@ -31,10 +31,10 @@ map <leader>gca :Gcommit --amend<CR>
 map <leader>gra :Git ra<CR>
 
 "" Quickly edit configuration files
-map <leader>vv :vsplit ~/.vimrc\|set bufhidden=delete<CR>
-map <leader>vm :vsplit ~/.vim/mappings-config.vim\|set bufhidden=delete<CR>
-map <leader>vt :vsplit ~/.vim/test-runner.vim\|set bufhidden=delete<CR>
-map <leader>vb :vsplit ~/.vim/Vimfile\|set bufhidden=delete<CR>
+map <Leader>vv :vsplit ~/.vimrc\|set bufhidden=delete<CR>
+map <Leader>vm :vsplit ~/.vim/config/mappings.vim\|set bufhidden=delete<CR>
+map <Leader>vt :vsplit ~/.vim/config/test-runner.vim\|set bufhidden=delete<CR>
+map <Leader>vb :vsplit ~/.vim/config/bundle.vim\|set bufhidden=delete<CR>
 
 "" Move between split windows
 nnoremap <silent> <leader>h :wincmd h<cr>
