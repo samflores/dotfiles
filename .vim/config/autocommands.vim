@@ -51,3 +51,6 @@ autocmd! BufEnter *-spec.js  compiler mocha
 autocmd! BufEnter *_mspec.rb compiler minitest
 autocmd! BufEnter *_spec.rb  compiler rspec
 autocmd! BufEnter *.feature  compiler cucumber
+
+autocmd! CmdwinEnter *        call UnmapCR()
+autocmd! CmdwinLeave *        call MapCR()

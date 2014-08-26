@@ -7,6 +7,17 @@ map <leader>i :set list!<CR>
 inoremap jk <ESC>
 nnoremap <leader>ch :CloseHiddenBuffers
 
+"" Test Runner
+function! MapCR()
+  nnoremap <silent> <CR>         :call RunTests(1)<CR>
+  nnoremap <silent> <Leader><CR> :call RunTests()<CR>
+endfunction
+
+function! UnmapCR()
+  nnoremap <CR> <CR>
+endfunction
+call MapCR()
+
 "" Unite mappings
 nnoremap <leader>f :<C-u>Unite -start-insert -no-split file_rec<CR>
 
