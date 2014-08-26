@@ -2,10 +2,12 @@
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 "" General mappings
-nnoremap <leader><leader> <c-^>
-map <leader>i :set list!<CR>
-inoremap jk <ESC>
-nnoremap <leader>ch :CloseHiddenBuffers
+nnoremap <Leader><Leader> <c-^>
+map <Leader>i :set list!<CR>
+nnoremap <Leader>ch :CloseHiddenBuffers<CR>
+nnoremap 0 ^
+nnoremap <Leader>0 0
+nnoremap <silent> <c-k> :noh<CR>
 
 "" Test Runner
 function! MapCR()
@@ -51,10 +53,6 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
-
-nnoremap 0 ^
-nnoremap <leader>0 0
-nnoremap <silent> <C-k> :noh<CR>
 
 "" Syntax highlight details
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
