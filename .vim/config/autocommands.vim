@@ -46,3 +46,8 @@ autocmd! FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd! FileType python        setlocal omnifunc=pythoncomplete#Complete
 autocmd! FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd! FileType java          setlocal omnifunc=javacomplete#Complete
+
+autocmd! BufEnter *-spec.js  compiler mocha
+autocmd! BufEnter *_mspec.rb compiler minitest
+autocmd! BufEnter *_spec.rb  compiler rspec
+autocmd! BufEnter *.feature  compiler cucumber
