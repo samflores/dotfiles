@@ -38,3 +38,11 @@ autocmd! BufWritePost ~/.vim/config/*.vim source %
 
 "" Prevent buffer created by fugitive.vim from being hidden
 autocmd! BufReadPost fugitive://* set bufhidden=delete
+
+" NeoCompletion Omni completion
+autocmd! FileType css           setlocal omnifunc=csscomplete#CompleteCSS
+autocmd! FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd! FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd! FileType python        setlocal omnifunc=pythoncomplete#Complete
+autocmd! FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd! FileType java          setlocal omnifunc=javacomplete#Complete
