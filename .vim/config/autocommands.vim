@@ -32,8 +32,9 @@ autocmd! BufWritePre *
       \ let @/=_s |
       \ call cursor(l, c)
 
+"" Reload configs on save
 autocmd! BufWritePost ~/.vimrc source %
-autocmd! BufWritePost ~/.vim/*.vim source %
+autocmd! BufWritePost ~/.vim/config/*.vim source %
 
 "" Prevent buffer created by fugitive.vim from being hidden
 autocmd! BufReadPost fugitive://* set bufhidden=delete
