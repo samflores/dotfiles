@@ -1,5 +1,5 @@
 "" Key mappings
-cnoremap %% <C-R>=expand('%:h').'/'<CR>
+cnoremap %% <c-r>=expand('%:h').'/'<CR>
 
 "" General mappings
 nnoremap <Leader><Leader> <c-^>
@@ -21,16 +21,31 @@ endfunction
 call MapCR()
 
 "" Unite mappings
-nnoremap <leader>f :<C-u>Unite -start-insert -no-split file_rec<CR>
+nnoremap <Leader>t :<c-u>Unite -no-split -buffer-name=files    -start-insert file_rec<CR>
+nnoremap <Leader>f :<c-u>Unite -no-split -buffer-name=files    -start-insert file<CR>
+nnoremap <Leader>r :<c-u>Unite -no-split -buffer-name=mru      -start-insert file_mru<CR>
+nnoremap <Leader>o :<c-u>Unite -no-split -buffer-name=outline  -start-insert outline<CR>
+nnoremap <Leader>y :<c-u>Unite -no-split -buffer-name=yank     history/yank<CR>
+nnoremap <Leader>e :<c-u>Unite -no-split -buffer-name=buffer   buffer<CR>
+nnoremap <Leader>b :<c-u>Unite -no-split -buffer-name=build    build<CR>
+nnoremap <Leader>x :<c-u>Unite -no-split -buffer-name=quickfix quickfix<CR>
 
-"" Fugitive mappings
-map <leader>gws :Gstatus<CR>
-map <leader>gia :Gwrite<CR>
-map <leader>gco :Gread<CR>
-map <leader>gwd :Gdiff<CR>
-map <leader>gc  :Gcommit<CR>
-map <leader>gca :Gcommit --amend<CR>
-map <leader>gra :Git ra<CR>
+"" NeoSnippet mappings
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
+
+"" Fugitive mappings>
+map <Leader>gws :Gstatus<CR>
+map <Leader>gia :Gwrite<CR>
+map <Leader>gco :Gread<CR>
+map <Leader>gwd :Gvdiff<CR>
+map <Leader>gc  :Gcommit<CR>
+map <Leader>gca :Gcommit --amend<CR>
+map <Leader>gra :Git ra<CR>
 
 "" Quickly edit configuration files
 map <Leader>vv :vsplit ~/.vimrc\|set bufhidden=delete<CR>
@@ -39,14 +54,14 @@ map <Leader>vt :vsplit ~/.vim/config/test-runner.vim\|set bufhidden=delete<CR>
 map <Leader>vb :vsplit ~/.vim/config/bundle.vim\|set bufhidden=delete<CR>
 
 "" Move between split windows
-nnoremap <silent> <leader>h :wincmd h<cr>
-nnoremap <silent> <leader>j :wincmd j<cr>
-nnoremap <silent> <leader>k :wincmd k<cr>
-nnoremap <silent> <leader>l :wincmd l<cr>
-nnoremap <silent> <leader>H :wincmd H<cr>
-nnoremap <silent> <leader>J :wincmd J<cr>
-nnoremap <silent> <leader>K :wincmd K<cr>
-nnoremap <silent> <leader>L :wincmd L<cr>
+nnoremap <silent> <Leader>h :wincmd h<CR>
+nnoremap <silent> <Leader>j :wincmd j<CR>
+nnoremap <silent> <Leader>k :wincmd k<CR>
+nnoremap <silent> <Leader>l :wincmd l<CR>
+nnoremap <silent> <Leader>H :wincmd H<CR>
+nnoremap <silent> <Leader>J :wincmd J<CR>
+nnoremap <silent> <Leader>K :wincmd K<CR>
+nnoremap <silent> <Leader>L :wincmd L<CR>
 
 "" Force myself to use hjkl instead arrows
 noremap <Up> <nop>
